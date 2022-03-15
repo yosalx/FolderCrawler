@@ -25,20 +25,23 @@ namespace WinFormsApp1
         }
         public void search(int set)
         {
+            var options = new EnumerationOptions()
+            {
+                IgnoreInaccessible = true, AttributesToSkip = FileAttributes.System
+            };
             int i = 0;
             bool found = false;
             tree.Add(new dirTree(-999, Path.GetFileName(startdir), startdir,"Folder","Not"));
             string parentdir = startdir;
             while (i < tree.Count())
             {
-                try
-                {
-                    List<string> temptree = Directory.GetFiles(tree[i].directory).ToList();
+
+                    List<string> temptree = Directory.GetFiles(tree[i].directory,"*.*",options).ToList();
                     foreach (string a in temptree)
                     {
                         if ((tree[i].directory + "\\" + filename) == a)
                         {
-                            tree.Add(new dirTree(i, Path.GetFileName(a), a, "File","Found"));
+                            tree.Add(new dirTree(i, Path.GetFileName(a), a, "File", "Found"));
                             found = true;
                         }
                         else
@@ -50,11 +53,13 @@ namespace WinFormsApp1
                     {
                         break;
                     }
-                    temptree = Directory.GetDirectories(tree[i].directory).ToList(); ;
+                    temptree = Directory.GetDirectories(tree[i].directory,"*",options).ToList(); ;
                     foreach (string a in temptree)
                     {
                         tree.Add(new dirTree(i, Path.GetFileName(a), a, "Folder", "Not"));
                     }
+                try
+                {
                     i++;
                     parentdir = tree[i].directory;
                     while (tree[i].type == "File" && i < tree.Count())
@@ -63,7 +68,7 @@ namespace WinFormsApp1
                         parentdir = tree[i].directory;
                     }
                 }
-                catch { }
+                catch { break; }
             }
         }
     }
