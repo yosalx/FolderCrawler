@@ -23,7 +23,7 @@ namespace WinFormsApp1
         {
             return this.tree;
         }
-        public void search(int set)
+        public void bfs_search(int set)
         {
             var options = new EnumerationOptions()
             {
@@ -36,28 +36,28 @@ namespace WinFormsApp1
             while (i < tree.Count())
             {
 
-                    List<string> temptree = Directory.GetFiles(tree[i].directory,"*.*",options).ToList();
-                    foreach (string a in temptree)
+                List<string> temptree = Directory.GetFiles(tree[i].directory,"*.*",options).ToList();
+                foreach (string a in temptree)
+                {
+                    if ((tree[i].directory + "\\" + filename) == a)
                     {
-                        if ((tree[i].directory + "\\" + filename) == a)
-                        {
-                            tree.Add(new dirTree(i, Path.GetFileName(a), a, "File", "Found"));
-                            found = true;
-                        }
-                        else
-                        {
-                            tree.Add(new dirTree(i, Path.GetFileName(a), a, "File", "Not"));
-                        }
+                        tree.Add(new dirTree(i, Path.GetFileName(a), a, "File", "Found"));
+                        found = true;
                     }
-                    if (set == 0 && found)
+                    else
                     {
-                        break;
+                        tree.Add(new dirTree(i, Path.GetFileName(a), a, "File", "Not"));
                     }
-                    temptree = Directory.GetDirectories(tree[i].directory,"*",options).ToList(); ;
-                    foreach (string a in temptree)
-                    {
-                        tree.Add(new dirTree(i, Path.GetFileName(a), a, "Folder", "Not"));
-                    }
+                }
+                if (set == 0 && found)
+                {
+                    break;
+                }
+                temptree = Directory.GetDirectories(tree[i].directory,"*",options).ToList(); ;
+                foreach (string a in temptree)
+                {
+                    tree.Add(new dirTree(i, Path.GetFileName(a), a, "Folder", "Not"));
+                }
                 try
                 {
                     i++;

@@ -15,15 +15,23 @@ namespace WinFormsApp1
                 string dir = textBox1.Text;
                 string filename = textBox2.Text;
                 BFS test = new BFS(dir, filename);
-                test.search(0);
+                test.bfs_search(0);
                 foreach (dirTree item in test.getTree())
                 {
-                    listBox1.Items.Add(item.found + "\t" + item.name + "\t\t" + item.directory);
+                    listBox1.Items.Add(item.found + "\t" + item.directory);
                 }
             }
             else
             {
                 listBox1.Items.Clear();
+                string dir = textBox1.Text;
+                string filename = textBox2.Text;
+                DFS test = new DFS(dir, filename);
+                test.dfs_search(0);
+                foreach (dirTree item in test.getDFSTree())
+                {
+                    listBox1.Items.Add(item.found + "\t" + item.directory);
+                }
             }
         }
 
@@ -35,15 +43,23 @@ namespace WinFormsApp1
                 string dir = textBox1.Text;
                 string filename = textBox2.Text;
                 BFS test = new BFS(dir, filename);
-                test.search(1);
+                test.bfs_search(1);
                 foreach (dirTree item in test.getTree())
                 {
-                    listBox1.Items.Add(item.found + "\t" + item.name + "\t\t" + item.directory);
+                    listBox1.Items.Add(item.found + "\t" + item.directory);
                 }
             }
             else
             {
                 listBox1.Items.Clear();
+                string dir = textBox1.Text;
+                string filename = textBox2.Text;
+                DFS test = new DFS(dir, filename);
+                test.dfs_search(1);
+                foreach (dirTree item in test.getDFSTree())
+                {
+                    listBox1.Items.Add(item.found + "\t" + item.directory);
+                }
             }
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
