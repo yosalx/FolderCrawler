@@ -44,10 +44,10 @@ namespace WinFormsApp1
             while (i < tree.Count())
             {
 
-                List<string> temptree = Directory.GetFiles(tree[i].directory,"*.*",options).ToList();
+                List<string> temptree = Directory.GetFiles(tree[i].directory,"*",options).ToList();
                 foreach (string a in temptree)
                 {
-                    if ((tree[i].directory + "\\" + filename) == a)
+                    if ((Path.GetFileName(a) == this.filename))
                     {
                         tree.Add(new dirTree(i, Path.GetFileName(a), a, "File", "Found"));
                         found = true;

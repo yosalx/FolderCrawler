@@ -1,5 +1,4 @@
 using System.Windows.Forms;
-using Microsoft.Msagl.Drawing;
 using Microsoft.Msagl.GraphViewerGdi;
 
 namespace WinFormsApp1
@@ -21,7 +20,6 @@ namespace WinFormsApp1
                 string filename = textBox2.Text;
                 BFS test = new BFS(dir, filename);
                 test.bfs_search(0);
-                foreach (dirTree item in test.getTree())
                 panel.SuspendLayout();
                 panel.Controls.Add(viewer);
                 panel.ResumeLayout();
@@ -36,7 +34,6 @@ namespace WinFormsApp1
                 string filename = textBox2.Text;
                 DFS test = new DFS(dir, filename);
                 test.dfs_search(0);
-                foreach (dirTree item in test.getDFSTree())
                 panel.SuspendLayout();
                 panel.Controls.Add(viewer);
                 panel.ResumeLayout();

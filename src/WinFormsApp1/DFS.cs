@@ -40,10 +40,10 @@ namespace WinFormsApp1
             };
             int i = 0;
 
-            string[] files = Directory.GetFiles(currDir,"*.*",options);
+            string[] files = Directory.GetFiles(currDir,"*",options);
                 
             foreach(string content in files){
-                if ((currDir + "\\" + filename) == content)
+                if (Path.GetFileName(content) == this.filename)
                 {
                     tree.Add(new dirTree(i, Path.GetFileName(content), content, "File", "Found"));
                     done = true;
