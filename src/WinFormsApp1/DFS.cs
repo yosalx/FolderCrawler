@@ -68,7 +68,7 @@ namespace WinFormsApp1
             {
                 if (findIdbyName(tree[j].name) != j)
                 {
-                    tree[findIdbyName(tree[j].name)].name += " (" + tree[tree[findIdbyName(tree[j].name)].parent_id].name + ")";
+                    tree[findIdbyName(tree[j].name)].name = tree[findIdbyName(tree[j].name)].name + " (" + tree[tree[findIdbyName(tree[j].name)].parent_id].name + ")";
                     tree[j].name += " (" + tree[tree[j].parent_id].name + ")";
                 }
                 if (tree[j].found == "Found")
