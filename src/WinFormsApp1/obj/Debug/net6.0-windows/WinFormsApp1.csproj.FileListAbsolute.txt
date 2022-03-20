@@ -32,3 +32,25 @@ C:\Users\Arik\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0
 C:\Users\Arik\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.pdb
 C:\Users\Arik\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.genruntimeconfig.cache
 C:\Users\Arik\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\ref\WinFormsApp1.dll
+C:\Teknik Informatika\Semester 4\Strategi Algoritma\Tugas Besar 2\Tubes2_13520048\src\WinFormsApp1\bin\Debug\net6.0-windows\WinFormsApp1.exe
+C:\Teknik Informatika\Semester 4\Strategi Algoritma\Tugas Besar 2\Tubes2_13520048\src\WinFormsApp1\bin\Debug\net6.0-windows\WinFormsApp1.deps.json
+C:\Teknik Informatika\Semester 4\Strategi Algoritma\Tugas Besar 2\Tubes2_13520048\src\WinFormsApp1\bin\Debug\net6.0-windows\WinFormsApp1.runtimeconfig.json
+C:\Teknik Informatika\Semester 4\Strategi Algoritma\Tugas Besar 2\Tubes2_13520048\src\WinFormsApp1\bin\Debug\net6.0-windows\WinFormsApp1.dll
+C:\Teknik Informatika\Semester 4\Strategi Algoritma\Tugas Besar 2\Tubes2_13520048\src\WinFormsApp1\bin\Debug\net6.0-windows\WinFormsApp1.pdb
+C:\Teknik Informatika\Semester 4\Strategi Algoritma\Tugas Besar 2\Tubes2_13520048\src\WinFormsApp1\bin\Debug\net6.0-windows\AutomaticGraphLayout.dll
+C:\Teknik Informatika\Semester 4\Strategi Algoritma\Tugas Besar 2\Tubes2_13520048\src\WinFormsApp1\bin\Debug\net6.0-windows\AutomaticGraphLayout.Drawing.dll
+C:\Teknik Informatika\Semester 4\Strategi Algoritma\Tugas Besar 2\Tubes2_13520048\src\WinFormsApp1\bin\Debug\net6.0-windows\Microsoft.Msagl.GraphViewerGdi.dll
+C:\Teknik Informatika\Semester 4\Strategi Algoritma\Tugas Besar 2\Tubes2_13520048\src\WinFormsApp1\bin\Debug\net6.0-windows\Microsoft.Msagl.WpfGraphControl.dll
+C:\Teknik Informatika\Semester 4\Strategi Algoritma\Tugas Besar 2\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.csproj.AssemblyReference.cache
+C:\Teknik Informatika\Semester 4\Strategi Algoritma\Tugas Besar 2\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Form1.resources
+C:\Teknik Informatika\Semester 4\Strategi Algoritma\Tugas Besar 2\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.csproj.GenerateResource.cache
+C:\Teknik Informatika\Semester 4\Strategi Algoritma\Tugas Besar 2\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Teknik Informatika\Semester 4\Strategi Algoritma\Tugas Besar 2\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.AssemblyInfoInputs.cache
+C:\Teknik Informatika\Semester 4\Strategi Algoritma\Tugas Besar 2\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.AssemblyInfo.cs
+C:\Teknik Informatika\Semester 4\Strategi Algoritma\Tugas Besar 2\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.csproj.CoreCompileInputs.cache
+C:\Teknik Informatika\Semester 4\Strategi Algoritma\Tugas Besar 2\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.csproj.CopyComplete
+C:\Teknik Informatika\Semester 4\Strategi Algoritma\Tugas Besar 2\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.dll
+C:\Teknik Informatika\Semester 4\Strategi Algoritma\Tugas Besar 2\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\refint\WinFormsApp1.dll
+C:\Teknik Informatika\Semester 4\Strategi Algoritma\Tugas Besar 2\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.pdb
+C:\Teknik Informatika\Semester 4\Strategi Algoritma\Tugas Besar 2\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.genruntimeconfig.cache
+C:\Teknik Informatika\Semester 4\Strategi Algoritma\Tugas Besar 2\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\ref\WinFormsApp1.dll

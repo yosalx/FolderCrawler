@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using Microsoft.Msagl.Drawing;
+using Microsoft.Msagl.GraphViewerGdi;
 
 namespace WinFormsApp1
 {
@@ -12,18 +14,23 @@ namespace WinFormsApp1
         private string startdir;
         private string filename;
         private List<dirTree> tree;
+        private Graph graph;
 
         public DFS(string startdir, string filename)
         {
             this.startdir = @startdir;
             this.filename = filename;
             tree = new List<dirTree>();
+            graph = new Graph();
         }
         public List<dirTree> getDFSTree()
         {
             return this.tree;
         }
-
+        public Graph getGraph()
+        {
+            return this.graph;
+        }
         public bool reccursion(string currDir, int set, bool done)
         {
             var options = new EnumerationOptions()
@@ -40,6 +47,7 @@ namespace WinFormsApp1
                 {
                     tree.Add(new dirTree(i, Path.GetFileName(content), content, "File", "Found"));
                     done = true;
+                    graph.AddEdge(Path.GetFileName(currDir),Path.GetFileName(content));
                     if (done && set == 0)
                     {
                         return done;
@@ -48,6 +56,7 @@ namespace WinFormsApp1
                 else
                 {
                     tree.Add(new dirTree(i, Path.GetFileName(content), content, "File", "Not"));
+                    graph.AddEdge(Path.GetFileName(currDir), Path.GetFileName(content));
                 }
             }
 
@@ -55,6 +64,7 @@ namespace WinFormsApp1
             foreach (string Folder in Dirs)
             {
                 tree.Add(new dirTree(i, Path.GetFileName(Folder), Folder, "Folder", "Not"));
+                graph.AddEdge(Path.GetFileName(currDir), Path.GetFileName(Folder));
                 done = reccursion(Folder, set, done);
                 if (done && set == 0)
                 {

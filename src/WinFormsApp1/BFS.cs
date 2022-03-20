@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using Microsoft.Msagl.Drawing;
+using Microsoft.Msagl.GraphViewerGdi;
 
 namespace WinFormsApp1
 {
@@ -12,16 +14,22 @@ namespace WinFormsApp1
         private string startdir;
         private string filename;
         private List<dirTree> tree;
+        private Graph graph;
 
         public BFS(string startdir, string filename)
         {
             this.startdir = @startdir;
             this.filename = filename;
             tree = new List<dirTree>();
+            graph = new Graph();
         }
         public List<dirTree> getTree()
         {
             return this.tree;
+        }
+        public Graph getGraph()
+        {
+            return this.graph;
         }
         public void bfs_search(int set)
         {
@@ -48,15 +56,17 @@ namespace WinFormsApp1
                     {
                         tree.Add(new dirTree(i, Path.GetFileName(a), a, "File", "Not"));
                     }
+                    graph.AddEdge(tree[i].name, Path.GetFileName(a));
                 }
                 if (set == 0 && found)
                 {
-                    break;
+                    return;
                 }
                 temptree = Directory.GetDirectories(tree[i].directory,"*",options).ToList(); ;
                 foreach (string a in temptree)
                 {
                     tree.Add(new dirTree(i, Path.GetFileName(a), a, "Folder", "Not"));
+                    graph.AddEdge(tree[i].name, Path.GetFileName(a));
                 }
                 try
                 {

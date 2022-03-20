@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "maOPALNk21J93w9jQFlAgCVuK97Sr1GxGn5pFsp31b7PkWg/hFlcRr2vvMxLFR6go5jES0QzzfUS+Kj/FNrshA==",
+  "dgSpecHash": "PAqdVDrH8yRRcaToDKoUmQE3bxL6AdrK8gmhvzAcd8B2tX1PmY92v8YcMFANVq8t4CE/zsTuKUl371ZBHGOlYA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Arik\\Documents\\GitHub\\Tubes2_13520048\\src\\WinFormsApp1\\WinFormsApp1.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Teknik Informatika\\Semester 4\\Strategi Algoritma\\Tugas Besar 2\\Tubes2_13520048\\src\\WinFormsApp1\\WinFormsApp1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Budi\\.nuget\\packages\\automaticgraphlayout\\1.1.11\\automaticgraphlayout.1.1.11.nupkg.sha512",
+    "C:\\Users\\Budi\\.nuget\\packages\\automaticgraphlayout.drawing\\1.1.11\\automaticgraphlayout.drawing.1.1.11.nupkg.sha512",
+    "C:\\Users\\Budi\\.nuget\\packages\\automaticgraphlayout.graphviewergdi\\1.1.11\\automaticgraphlayout.graphviewergdi.1.1.11.nupkg.sha512",
+    "C:\\Users\\Budi\\.nuget\\packages\\automaticgraphlayout.wpfgraphcontrol\\1.1.11\\automaticgraphlayout.wpfgraphcontrol.1.1.11.nupkg.sha512"
+  ],
   "logs": []
 }

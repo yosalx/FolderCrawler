@@ -1,7 +1,12 @@
+using System.Windows.Forms;
+using Microsoft.Msagl.Drawing;
+using Microsoft.Msagl.GraphViewerGdi;
+
 namespace WinFormsApp1
 {
     public partial class Form1 : Form
     {
+        GViewer viewer = new GViewer();
         public Form1()
         {
             InitializeComponent();
@@ -17,9 +22,12 @@ namespace WinFormsApp1
                 BFS test = new BFS(dir, filename);
                 test.bfs_search(0);
                 foreach (dirTree item in test.getTree())
-                {
-                    listBox1.Items.Add(item.found + "\t" + item.directory);
-                }
+                panel.SuspendLayout();
+                panel.Controls.Add(viewer);
+                panel.ResumeLayout();
+                panel.Show();
+                viewer.Graph = test.getGraph();
+                viewer.Dock = DockStyle.Fill;
             }
             else
             {
@@ -29,9 +37,12 @@ namespace WinFormsApp1
                 DFS test = new DFS(dir, filename);
                 test.dfs_search(0);
                 foreach (dirTree item in test.getDFSTree())
-                {
-                    listBox1.Items.Add(item.found + "\t" + item.directory);
-                }
+                panel.SuspendLayout();
+                panel.Controls.Add(viewer);
+                panel.ResumeLayout();
+                panel.Show();
+                viewer.Graph = test.getGraph();
+                viewer.Dock = DockStyle.Fill;
             }
         }
 
@@ -44,10 +55,12 @@ namespace WinFormsApp1
                 string filename = textBox2.Text;
                 BFS test = new BFS(dir, filename);
                 test.bfs_search(1);
-                foreach (dirTree item in test.getTree())
-                {
-                    listBox1.Items.Add(item.found + "\t" + item.directory);
-                }
+                panel.SuspendLayout();
+                panel.Controls.Add(viewer);
+                panel.ResumeLayout();
+                panel.Show();
+                viewer.Graph = test.getGraph();
+                viewer.Dock = DockStyle.Fill;
             }
             else
             {
@@ -56,13 +69,20 @@ namespace WinFormsApp1
                 string filename = textBox2.Text;
                 DFS test = new DFS(dir, filename);
                 test.dfs_search(1);
-                foreach (dirTree item in test.getDFSTree())
-                {
-                    listBox1.Items.Add(item.found + "\t" + item.directory);
-                }
+                panel.SuspendLayout();
+                panel.Controls.Add(viewer);
+                panel.ResumeLayout();
+                panel.Show();
+                viewer.Graph = test.getGraph();
+                viewer.Dock = DockStyle.Fill;
             }
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
