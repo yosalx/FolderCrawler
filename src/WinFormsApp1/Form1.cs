@@ -34,6 +34,7 @@ namespace WinFormsApp1
                 string filename = textBox2.Text;
                 DFS test = new DFS(dir, filename);
                 test.dfs_search(0);
+                test.makeGraph();
                 panel.SuspendLayout();
                 panel.Controls.Add(viewer);
                 panel.ResumeLayout();
@@ -66,6 +67,7 @@ namespace WinFormsApp1
                 string filename = textBox2.Text;
                 DFS test = new DFS(dir, filename);
                 test.dfs_search(1);
+                test.makeGraph();
                 panel.SuspendLayout();
                 panel.Controls.Add(viewer);
                 panel.ResumeLayout();
@@ -80,6 +82,11 @@ namespace WinFormsApp1
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

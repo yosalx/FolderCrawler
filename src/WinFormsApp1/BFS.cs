@@ -43,7 +43,6 @@ namespace WinFormsApp1
             string parentdir = startdir;
             while (i < tree.Count())
             {
-
                 List<string> temptree = Directory.GetFiles(tree[i].directory,"*",options).ToList();
                 foreach (string a in temptree)
                 {
