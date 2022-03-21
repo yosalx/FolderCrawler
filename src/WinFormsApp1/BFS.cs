@@ -91,7 +91,7 @@ namespace WinFormsApp1
                     {
                         tree.Add(new dirTree(i, Path.GetFileName(a), a, "File", "Not"));
                     }
-                    graph.AddEdge(tree[i].name, Path.GetFileName(a));
+                    graph.AddEdge(tree[i].name, Path.GetFileName(a)).Attr.Color = Microsoft.Msagl.Drawing.Color.Red;
                 }
                 
                 if (set == 0 && found)
