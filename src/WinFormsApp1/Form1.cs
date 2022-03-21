@@ -8,13 +8,14 @@ namespace BingSlamet
         public Form1()
         {
             InitializeComponent();
+            Application.VisualStyleState = System.Windows.Forms.VisualStyles.VisualStyleState.NoneEnabled;
+            //            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             if (comboBox1.Items[comboBox1.SelectedIndex].ToString() == "BFS")
             {
-                listBox1.Items.Clear();
                 string dir = label2.Text;
                 string filename = textBox2.Text;
                 List<string> vs = new List<string>();
@@ -31,7 +32,6 @@ namespace BingSlamet
             }
             else
             {
-                listBox1.Items.Clear();
                 string dir = label2.Text;
                 string filename = textBox2.Text;
                 Search test = new(dir, filename);
@@ -51,7 +51,6 @@ namespace BingSlamet
         {
             if (comboBox1.Items[comboBox1.SelectedIndex].ToString() == "BFS")
             {
-                listBox1.Items.Clear();
                 string dir = label2.Text;
                 string filename = textBox2.Text;
                 List<string> vs = new List<string>();
@@ -68,7 +67,6 @@ namespace BingSlamet
             }
             else
             {
-                listBox1.Items.Clear();
                 string dir = label2.Text;
                 string filename = textBox2.Text;
                 Search test = new(dir, filename);
@@ -117,6 +115,11 @@ namespace BingSlamet
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
