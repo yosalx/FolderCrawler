@@ -12,8 +12,20 @@
       }
     ],
     "additionalProbingPaths": [
+<<<<<<< HEAD
       "C:\\Users\\Yoseph Alexander\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\Yoseph Alexander\\.nuget\\packages"
+=======
+      "C:\\Users\\Budi\\.dotnet\\store\\|arch|\\|tfm|",
+<<<<<<< Updated upstream
+      "C:\\Users\\Budi\\.nuget\\packages"
+<<<<<<< HEAD
+>>>>>>> 137c8d3 (iya)
+=======
+=======
+      "C:\\Users\\Yoseph Alexander\\.nuget\\packages"
+>>>>>>> Stashed changes
+>>>>>>> a5c2c60 (merge)
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true

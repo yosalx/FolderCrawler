@@ -31,7 +31,42 @@ namespace WinFormsApp1
         {
             return this.graph;
         }
-        public void bfs_search(int set)
+        
+
+        public void findFinal(string a)
+        {
+            string[] directories = this.startdir.Split("\\");
+            string final = "";
+            foreach(string x in directories)
+            {
+                final = x;
+            }
+            string y = this.filename;
+            //node root
+            Node test;
+            while (y != final)
+            {
+                test = this.graph.FindNode(y);
+
+                if(test != null)
+                {
+                    test.Attr.FillColor = Microsoft.Msagl.Drawing.Color.Green;
+                    foreach (Edge b in test.InEdges)
+                    {
+                        b.Attr.Color = Microsoft.Msagl.Drawing.Color.Green;
+                        test = b.SourceNode;
+                    }
+                    test.Attr.FillColor = Microsoft.Msagl.Drawing.Color.Green;
+                    y = test.Id;
+                }
+                else
+                {
+                    break;
+                }
+            }
+        }
+
+        public void bfs_search(int set, ref List<string> lokasi)
         {
             var options = new EnumerationOptions()
             {
@@ -50,6 +85,7 @@ namespace WinFormsApp1
                     {
                         tree.Add(new dirTree(i, Path.GetFileName(a), a, "File", "Found"));
                         found = true;
+                        lokasi.Add(a);
                     }
                     else
                     {
@@ -57,6 +93,7 @@ namespace WinFormsApp1
                     }
                     graph.AddEdge(tree[i].name, Path.GetFileName(a));
                 }
+                
                 if (set == 0 && found)
                 {
                     return;

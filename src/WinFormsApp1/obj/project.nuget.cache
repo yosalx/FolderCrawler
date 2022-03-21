@@ -1,5 +1,6 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "gQgs+TZJA5SHMaU7q33t2IswkhHDi3wm3NjIcD45bG4uJQuUoI1MFrt8UGdjYN6LsY0PvSz55gHdvwIr9XrNbw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Yoseph Alexander\\Documents\\GitHub\\Tubes2_13520048\\src\\WinFormsApp1\\WinFormsApp1.csproj",
@@ -8,6 +9,16 @@
     "C:\\Users\\Yoseph Alexander\\.nuget\\packages\\automaticgraphlayout.drawing\\1.1.11\\automaticgraphlayout.drawing.1.1.11.nupkg.sha512",
     "C:\\Users\\Yoseph Alexander\\.nuget\\packages\\automaticgraphlayout.graphviewergdi\\1.1.11\\automaticgraphlayout.graphviewergdi.1.1.11.nupkg.sha512",
     "C:\\Users\\Yoseph Alexander\\.nuget\\packages\\automaticgraphlayout.wpfgraphcontrol\\1.1.11\\automaticgraphlayout.wpfgraphcontrol.1.1.11.nupkg.sha512"
+=======
+  "dgSpecHash": "PAqdVDrH8yRRcaToDKoUmQE3bxL6AdrK8gmhvzAcd8B2tX1PmY92v8YcMFANVq8t4CE/zsTuKUl371ZBHGOlYA==",
+  "success": true,
+  "projectFilePath": "C:\\Teknik Informatika\\Semester 4\\Strategi Algoritma\\Tugas Besar 2\\Tubes2_13520048\\src\\WinFormsApp1\\WinFormsApp1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Budi\\.nuget\\packages\\automaticgraphlayout\\1.1.11\\automaticgraphlayout.1.1.11.nupkg.sha512",
+    "C:\\Users\\Budi\\.nuget\\packages\\automaticgraphlayout.drawing\\1.1.11\\automaticgraphlayout.drawing.1.1.11.nupkg.sha512",
+    "C:\\Users\\Budi\\.nuget\\packages\\automaticgraphlayout.graphviewergdi\\1.1.11\\automaticgraphlayout.graphviewergdi.1.1.11.nupkg.sha512",
+    "C:\\Users\\Budi\\.nuget\\packages\\automaticgraphlayout.wpfgraphcontrol\\1.1.11\\automaticgraphlayout.wpfgraphcontrol.1.1.11.nupkg.sha512"
+>>>>>>> 137c8d3 (iya)
   ],
   "logs": []
 }

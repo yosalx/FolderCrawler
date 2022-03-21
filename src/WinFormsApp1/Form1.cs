@@ -18,8 +18,14 @@ namespace WinFormsApp1
                 listBox1.Items.Clear();
                 string dir = label2.Text;
                 string filename = textBox2.Text;
+                List<string> vs = new List<string>();
                 BFS test = new BFS(dir, filename);
-                test.bfs_search(0);
+                test.bfs_search(0, ref vs);
+                Console.WriteLine(vs);
+                foreach (string s in vs)
+                {
+                    test.findFinal(s);
+                }
                 panel.SuspendLayout();
                 panel.Controls.Add(viewer);
                 panel.ResumeLayout();
@@ -51,8 +57,9 @@ namespace WinFormsApp1
                 listBox1.Items.Clear();
                 string dir = label2.Text;
                 string filename = textBox2.Text;
+                List<string> vs = new List<string>();
                 BFS test = new BFS(dir, filename);
-                test.bfs_search(1);
+                test.bfs_search(1,ref vs);
                 panel.SuspendLayout();
                 panel.Controls.Add(viewer);
                 panel.ResumeLayout();
