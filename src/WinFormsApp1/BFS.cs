@@ -102,7 +102,7 @@ namespace WinFormsApp1
                 foreach (string a in temptree)
                 {
                     tree.Add(new dirTree(i, Path.GetFileName(a), a, "Folder", "Not"));
-                    graph.AddEdge(tree[i].name, Path.GetFileName(a));
+                    graph.AddEdge(tree[i].name, Path.GetFileName(a)).Attr.Color = Microsoft.Msagl.Drawing.Color.Red;
                 }
                 try
                 {
