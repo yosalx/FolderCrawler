@@ -116,6 +116,7 @@
             // 
             // panel
             // 
+            this.panel.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel.Location = new System.Drawing.Point(8, 231);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(1348, 463);

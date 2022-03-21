@@ -1,7 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
     "C:\\Users\\Yoseph Alexander\\Documents\\GitHub\\Tubes2_13520048\\src\\WinFormsApp1\\WinFormsApp1.csproj": {}
   },
   "projects": {
@@ -16,22 +15,6 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Yoseph Alexander\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-    "C:\\Teknik Informatika\\Semester 4\\Strategi Algoritma\\Tugas Besar 2\\Tubes2_13520048\\src\\WinFormsApp1\\WinFormsApp1.csproj": {}
-  },
-  "projects": {
-    "C:\\Teknik Informatika\\Semester 4\\Strategi Algoritma\\Tugas Besar 2\\Tubes2_13520048\\src\\WinFormsApp1\\WinFormsApp1.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Teknik Informatika\\Semester 4\\Strategi Algoritma\\Tugas Besar 2\\Tubes2_13520048\\src\\WinFormsApp1\\WinFormsApp1.csproj",
-        "projectName": "WinFormsApp1",
-        "projectPath": "C:\\Teknik Informatika\\Semester 4\\Strategi Algoritma\\Tugas Besar 2\\Tubes2_13520048\\src\\WinFormsApp1\\WinFormsApp1.csproj",
-        "packagesPath": "C:\\Users\\Budi\\.nuget\\packages\\",
-        "outputPath": "C:\\Teknik Informatika\\Semester 4\\Strategi Algoritma\\Tugas Besar 2\\Tubes2_13520048\\src\\WinFormsApp1\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\Budi\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 137c8d3 (iya)
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
