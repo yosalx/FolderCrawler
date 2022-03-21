@@ -8,6 +8,7 @@ namespace BingSlamet
         public string startdir;
         public string filename;
         public List<dirTree> tree;
+        public List<string> dir_found;
         public Graph graph;
         public Stopwatch stopwatch;
 
@@ -18,6 +19,7 @@ namespace BingSlamet
             tree = new List<dirTree>();
             graph = new Graph();
             stopwatch = new Stopwatch();
+            dir_found = new List<string>();
         }
         private void makeAllFound(dirTree found)
         {
@@ -104,6 +106,7 @@ namespace BingSlamet
                     tree.Add(new dirTree(findIdbyDir(currDir), Path.GetFileName(content), content, "File", "Found"));
                     done = true;
                     makeAllFound(tree[tree.Count() - 1]);
+                    dir_found.Add(content);
                     if (done && set == 0)
                     {
                         return done;
@@ -165,6 +168,7 @@ namespace BingSlamet
                         tree.Add(new dirTree(i, Path.GetFileName(a), a, "File", "Found"));
                         found = true;
                         makeAllFound(tree[tree.Count() - 1]);
+                        dir_found.Add(a);
                     }
                     else
                     {
