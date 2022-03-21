@@ -16,7 +16,7 @@ namespace WinFormsApp1
             if (comboBox1.Items[comboBox1.SelectedIndex].ToString() == "BFS")
             {
                 listBox1.Items.Clear();
-                string dir = label2.Text;
+                string dir = textBox1.Text;
                 string filename = textBox2.Text;
                 List<string> vs = new List<string>();
                 BFS test = new BFS(dir, filename);
@@ -36,7 +36,7 @@ namespace WinFormsApp1
             else
             {
                 listBox1.Items.Clear();
-                string dir = label2.Text;
+                string dir = textBox1.Text;
                 string filename = textBox2.Text;
                 DFS test = new DFS(dir, filename);
                 test.dfs_search(0);
@@ -55,11 +55,15 @@ namespace WinFormsApp1
             if (comboBox1.Items[comboBox1.SelectedIndex].ToString() == "BFS")
             {
                 listBox1.Items.Clear();
-                string dir = label2.Text;
+                string dir = textBox1.Text;
                 string filename = textBox2.Text;
                 List<string> vs = new List<string>();
                 BFS test = new BFS(dir, filename);
                 test.bfs_search(1,ref vs);
+                foreach (string s in vs)
+                {
+                    test.findFinal(s);
+                }
                 panel.SuspendLayout();
                 panel.Controls.Add(viewer);
                 panel.ResumeLayout();
@@ -70,7 +74,7 @@ namespace WinFormsApp1
             else
             {
                 listBox1.Items.Clear();
-                string dir = label2.Text;
+                string dir = textBox1.Text;
                 string filename = textBox2.Text;
                 DFS test = new DFS(dir, filename);
                 test.dfs_search(1);
@@ -96,32 +100,6 @@ namespace WinFormsApp1
         private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
-            {
-                label2.Text = folderBrowserDialog1.SelectedPath;
-            }
-        }
-
-        private void textBox2_Enter(object sender, EventArgs e)
-        {
-            if(textBox2.Text == "Type Filename")
-            {
-                textBox2.Text = "";
-                textBox2.ForeColor = Color.White;
-            }
-        }
-
-        private void textBox2_Leave(object sender, EventArgs e)
-        {
-            if (textBox2.Text == "")
-            {
-                textBox2.Text = "Type Filename";
-                textBox2.ForeColor = Color.White;
-            }
         }
     }
 }
