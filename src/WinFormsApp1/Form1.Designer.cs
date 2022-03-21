@@ -1,4 +1,4 @@
-﻿namespace WinFormsApp1
+﻿namespace BingSlamet
 {
     partial class Form1
     {
@@ -40,16 +40,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.label3 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.RoyalBlue;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(1195, 69);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(1792, 104);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(141, 43);
+            this.button1.Size = new System.Drawing.Size(212, 64);
             this.button1.TabIndex = 0;
             this.button1.Text = "Find First";
             this.button1.UseVisualStyleBackColor = false;
@@ -60,11 +61,10 @@
             this.textBox2.BackColor = System.Drawing.Color.RoyalBlue;
             this.textBox2.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBox2.ForeColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(11, 145);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.MinimumSize = new System.Drawing.Size(143, 26);
+            this.textBox2.Location = new System.Drawing.Point(16, 218);
+            this.textBox2.MinimumSize = new System.Drawing.Size(212, 26);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(185, 26);
+            this.textBox2.Size = new System.Drawing.Size(276, 28);
             this.textBox2.TabIndex = 2;
             this.textBox2.Text = "Type Filename";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -80,21 +80,19 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(8, 232);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.listBox1.ItemHeight = 30;
+            this.listBox1.Location = new System.Drawing.Point(12, 348);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(1349, 464);
+            this.listBox1.Size = new System.Drawing.Size(2022, 694);
             this.listBox1.TabIndex = 5;
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.RoyalBlue;
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(1195, 167);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Location = new System.Drawing.Point(1792, 250);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(141, 43);
+            this.button2.Size = new System.Drawing.Size(212, 64);
             this.button2.TabIndex = 6;
             this.button2.Text = "Find All";
             this.button2.UseVisualStyleBackColor = false;
@@ -107,19 +105,19 @@
             this.comboBox1.Items.AddRange(new object[] {
             "BFS",
             "DFS"});
-            this.comboBox1.Location = new System.Drawing.Point(11, 198);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox1.Location = new System.Drawing.Point(16, 297);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(185, 28);
+            this.comboBox1.Size = new System.Drawing.Size(276, 38);
             this.comboBox1.TabIndex = 7;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // panel
             // 
             this.panel.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.panel.Location = new System.Drawing.Point(8, 231);
+            this.panel.Location = new System.Drawing.Point(12, 346);
+            this.panel.Margin = new System.Windows.Forms.Padding(4);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(1348, 463);
+            this.panel.Size = new System.Drawing.Size(2022, 696);
             this.panel.TabIndex = 8;
             this.panel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -128,9 +126,10 @@
             this.button3.BackColor = System.Drawing.Color.RoyalBlue;
             this.button3.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(8, 80);
+            this.button3.Location = new System.Drawing.Point(12, 120);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(188, 32);
+            this.button3.Size = new System.Drawing.Size(282, 48);
             this.button3.TabIndex = 9;
             this.button3.Text = "Browse Folder";
             this.button3.UseVisualStyleBackColor = false;
@@ -139,11 +138,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Jokerman", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(8, 17);
+            this.label1.Location = new System.Drawing.Point(12, 26);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(547, 55);
+            this.label1.Size = new System.Drawing.Size(684, 59);
             this.label1.TabIndex = 10;
             this.label1.Text = "Bing Slamet Folder Crawler";
             // 
@@ -152,18 +152,41 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.DarkGray;
-            this.label2.Location = new System.Drawing.Point(202, 89);
+            this.label2.Location = new System.Drawing.Point(303, 134);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(138, 30);
+            this.label2.Size = new System.Drawing.Size(185, 42);
             this.label2.TabIndex = 11;
             this.label2.Text = "Starting Directory\r\n\r\n";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(1760, 1048);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(146, 30);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Time Elapsed: ";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(16, 1048);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(105, 30);
+            this.linkLabel1.TabIndex = 13;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "linkLabel1";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
-            this.ClientSize = new System.Drawing.Size(1368, 706);
+            this.ClientSize = new System.Drawing.Size(2052, 1087);
+            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);
@@ -174,7 +197,6 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button1);
             this.ForeColor = System.Drawing.Color.BlueViolet;
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -195,5 +217,7 @@
         private Label label1;
         private Label label2;
         private FolderBrowserDialog folderBrowserDialog1;
+        private Label label3;
+        private LinkLabel linkLabel1;
     }
 }

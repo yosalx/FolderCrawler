@@ -1,7 +1,6 @@
-using System.Windows.Forms;
 using Microsoft.Msagl.GraphViewerGdi;
 
-namespace WinFormsApp1
+namespace BingSlamet
 {
     public partial class Form1 : Form
     {
@@ -19,34 +18,32 @@ namespace WinFormsApp1
                 string dir = label2.Text;
                 string filename = textBox2.Text;
                 List<string> vs = new List<string>();
-                BFS test = new BFS(dir, filename);
-                test.bfs_search(0, ref vs);
-                Console.WriteLine(vs);
-                foreach (string s in vs)
-                {
-                    test.findFinal(s);
-                }
+                Search test = new(dir, filename);
+                test.bfs_search(0);
+                test.makeGraph();
                 panel.SuspendLayout();
                 panel.Controls.Add(viewer);
                 panel.ResumeLayout();
                 panel.Show();
-                viewer.Graph = test.getGraph();
+                viewer.Graph = test.graph;
                 viewer.Dock = DockStyle.Fill;
+                label3.Text = "Time Elapsed: " + test.stopwatch.Elapsed.ToString(@"m\:ss\.ffffff");
             }
             else
             {
                 listBox1.Items.Clear();
                 string dir = label2.Text;
                 string filename = textBox2.Text;
-                DFS test = new DFS(dir, filename);
+                Search test = new(dir, filename);
                 test.dfs_search(0);
                 test.makeGraph();
                 panel.SuspendLayout();
                 panel.Controls.Add(viewer);
                 panel.ResumeLayout();
                 panel.Show();
-                viewer.Graph = test.getGraph();
+                viewer.Graph = test.graph;
                 viewer.Dock = DockStyle.Fill;
+                label3.Text = "Time Elapsed: " + test.stopwatch.Elapsed.ToString(@"m\:ss\.ffffff");
             }
         }
 
@@ -58,49 +55,41 @@ namespace WinFormsApp1
                 string dir = label2.Text;
                 string filename = textBox2.Text;
                 List<string> vs = new List<string>();
-                BFS test = new BFS(dir, filename);
-                test.bfs_search(1,ref vs);
-                foreach (string s in vs)
-                {
-                    test.findFinal(s);
-                }
+                Search test = new(dir, filename);
+                test.bfs_search(1);
+                test.makeGraph();
                 panel.SuspendLayout();
                 panel.Controls.Add(viewer);
                 panel.ResumeLayout();
                 panel.Show();
-                viewer.Graph = test.getGraph();
+                viewer.Graph = test.graph;
                 viewer.Dock = DockStyle.Fill;
+                label3.Text = "Time Elapsed: " + test.stopwatch.Elapsed.ToString(@"m\:ss\.ffffff");
             }
             else
             {
                 listBox1.Items.Clear();
                 string dir = label2.Text;
                 string filename = textBox2.Text;
-                DFS test = new DFS(dir, filename);
+                Search test = new(dir, filename);
                 test.dfs_search(1);
                 test.makeGraph();
                 panel.SuspendLayout();
                 panel.Controls.Add(viewer);
                 panel.ResumeLayout();
                 panel.Show();
-                viewer.Graph = test.getGraph();
+                viewer.Graph = test.graph;
                 viewer.Dock = DockStyle.Fill;
+                label3.Text = "Time Elapsed: " + test.stopwatch.Elapsed.ToString(@"m\:ss\.ffffff");
             }
         }
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {}
 
         private void panel1_Paint(object sender, PaintEventArgs e)
-        {
+        {}
 
-        }
-
-        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
         private void button3_Click(object sender, EventArgs e)
         {
             if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
@@ -125,6 +114,11 @@ namespace WinFormsApp1
                 textBox2.Text = "Type Filename";
                 textBox2.ForeColor = Color.White;
             }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
         }
     }
 }

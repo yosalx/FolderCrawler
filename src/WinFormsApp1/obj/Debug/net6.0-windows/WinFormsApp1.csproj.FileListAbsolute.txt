@@ -21,7 +21,6 @@ C:\Users\Arik\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\bin\Debug\net6.0
 C:\Users\Arik\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\bin\Debug\net6.0-windows\WinFormsApp1.dll
 C:\Users\Arik\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\bin\Debug\net6.0-windows\WinFormsApp1.pdb
 C:\Users\Arik\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.csproj.AssemblyReference.cache
-C:\Users\Arik\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Form1.resources
 C:\Users\Arik\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.csproj.GenerateResource.cache
 C:\Users\Arik\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Arik\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.AssemblyInfoInputs.cache
@@ -81,3 +80,4 @@ C:\Users\Yoseph Alexander\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\
 C:\Users\Yoseph Alexander\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.pdb
 C:\Users\Yoseph Alexander\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.genruntimeconfig.cache
 C:\Users\Yoseph Alexander\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\ref\WinFormsApp1.dll
+C:\Users\Arik\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\BingSlamet.Form1.resources
