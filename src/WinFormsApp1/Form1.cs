@@ -1,15 +1,18 @@
 using Microsoft.Msagl.GraphViewerGdi;
+using System.Media;
 
 namespace BingSlamet
 {
     public partial class Main : Form
     {
+        //SoundPlayer backgroundSong = new SoundPlayer("C:/Teknik Informatika/Semester 4/Strategi Algoritma/Tugas Besar 2/Tubes2_13520048/src/WinFormsApp1/Bring Me To Life cover by Bev & Bob.wav");
         GViewer viewer = new GViewer();
         public Main()
         {
             InitializeComponent();
             Application.VisualStyleState = System.Windows.Forms.VisualStyles.VisualStyleState.NoneEnabled;
             //            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            //backgroundSong.Play();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -137,6 +140,21 @@ namespace BingSlamet
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.Exit();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

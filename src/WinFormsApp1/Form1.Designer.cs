@@ -42,10 +42,13 @@
             this.labelHyperlink = new System.Windows.Forms.LinkLabel();
             this.foreground = new System.Windows.Forms.Panel();
             this.windowsBar = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.foreground.SuspendLayout();
             this.windowsBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -53,7 +56,7 @@
             this.button1.BackColor = System.Drawing.Color.Silver;
             this.button1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(953, 57);
+            this.button1.Location = new System.Drawing.Point(950, 139);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(141, 43);
@@ -65,15 +68,16 @@
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(11, 162);
+            this.textBox2.Location = new System.Drawing.Point(8, 177);
             this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.MinimumSize = new System.Drawing.Size(143, 26);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(185, 26);
             this.textBox2.TabIndex = 2;
             this.textBox2.Text = "Type Filename";
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
             this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
             // 
@@ -88,7 +92,7 @@
             this.button2.BackColor = System.Drawing.Color.Silver;
             this.button2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(953, 132);
+            this.button2.Location = new System.Drawing.Point(950, 192);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(141, 43);
@@ -104,7 +108,7 @@
             this.comboBox1.Items.AddRange(new object[] {
             "BFS",
             "DFS"});
-            this.comboBox1.Location = new System.Drawing.Point(11, 198);
+            this.comboBox1.Location = new System.Drawing.Point(8, 207);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(185, 28);
@@ -114,7 +118,7 @@
             // ouputPanel
             // 
             this.ouputPanel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ouputPanel.Location = new System.Drawing.Point(8, 231);
+            this.ouputPanel.Location = new System.Drawing.Point(8, 240);
             this.ouputPanel.Name = "ouputPanel";
             this.ouputPanel.Size = new System.Drawing.Size(1098, 382);
             this.ouputPanel.TabIndex = 8;
@@ -125,7 +129,7 @@
             this.button3.BackColor = System.Drawing.Color.Silver;
             this.button3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(7, 99);
+            this.button3.Location = new System.Drawing.Point(5, 123);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(188, 49);
             this.button3.TabIndex = 9;
@@ -139,7 +143,7 @@
             this.TextStartingDir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(233)))), ((int)(((byte)(216)))));
             this.TextStartingDir.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TextStartingDir.ForeColor = System.Drawing.Color.Black;
-            this.TextStartingDir.Location = new System.Drawing.Point(198, 114);
+            this.TextStartingDir.Location = new System.Drawing.Point(199, 139);
             this.TextStartingDir.Name = "TextStartingDir";
             this.TextStartingDir.Size = new System.Drawing.Size(144, 36);
             this.TextStartingDir.TabIndex = 11;
@@ -177,6 +181,12 @@
             this.foreground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(233)))), ((int)(((byte)(216)))));
             this.foreground.Controls.Add(this.windowsBar);
             this.foreground.Controls.Add(this.TextStartingDir);
+            this.foreground.Controls.Add(this.button3);
+            this.foreground.Controls.Add(this.comboBox1);
+            this.foreground.Controls.Add(this.button1);
+            this.foreground.Controls.Add(this.button2);
+            this.foreground.Controls.Add(this.textBox2);
+            this.foreground.Controls.Add(this.pictureBox2);
             this.foreground.Location = new System.Drawing.Point(3, 0);
             this.foreground.Name = "foreground";
             this.foreground.Size = new System.Drawing.Size(1108, 653);
@@ -186,11 +196,25 @@
             // windowsBar
             // 
             this.windowsBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(229)))));
+            this.windowsBar.Controls.Add(this.label1);
             this.windowsBar.Controls.Add(this.pictureBox1);
             this.windowsBar.Location = new System.Drawing.Point(-8, 0);
             this.windowsBar.Name = "windowsBar";
             this.windowsBar.Size = new System.Drawing.Size(1121, 29);
             this.windowsBar.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(229)))));
+            this.label1.Font = new System.Drawing.Font("Tahoma", 8.4F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(43, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(201, 17);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Bing Slamet Folder Crawling";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox1
             // 
@@ -203,6 +227,17 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::WinFormsApp1.Properties.Resources.lologoan;
+            this.pictureBox2.Location = new System.Drawing.Point(-5, 10);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(228, 151);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -211,12 +246,7 @@
             this.ClientSize = new System.Drawing.Size(1113, 656);
             this.Controls.Add(this.labelHyperlink);
             this.Controls.Add(this.textTimeElapsed);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.ouputPanel);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.foreground);
             this.ForeColor = System.Drawing.Color.BlueViolet;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -228,7 +258,9 @@
             this.foreground.ResumeLayout(false);
             this.foreground.PerformLayout();
             this.windowsBar.ResumeLayout(false);
+            this.windowsBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -250,5 +282,7 @@
         private Panel foreground;
         private Panel windowsBar;
         private PictureBox pictureBox1;
+        private Label label1;
+        private PictureBox pictureBox2;
     }
 }
