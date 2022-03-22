@@ -195,9 +195,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WinFormsApp1.Properties.Resources.Button;
-            this.pictureBox1.Location = new System.Drawing.Point(1090, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(1091, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(19, 19);
+            this.pictureBox1.Size = new System.Drawing.Size(21, 24);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
