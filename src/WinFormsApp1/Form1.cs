@@ -2,10 +2,10 @@ using Microsoft.Msagl.GraphViewerGdi;
 
 namespace BingSlamet
 {
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
         GViewer viewer = new GViewer();
-        public Form1()
+        public Main()
         {
             InitializeComponent();
             Application.VisualStyleState = System.Windows.Forms.VisualStyles.VisualStyleState.NoneEnabled;
@@ -16,34 +16,34 @@ namespace BingSlamet
         {
             if (comboBox1.Items[comboBox1.SelectedIndex].ToString() == "BFS")
             {
-                string dir = label2.Text;
+                string dir = TextStartingDir.Text;
                 string filename = textBox2.Text;
                 List<string> vs = new List<string>();
                 Search test = new(dir, filename);
                 test.bfs_search(0);
                 test.makeGraph();
-                panel.SuspendLayout();
-                panel.Controls.Add(viewer);
-                panel.ResumeLayout();
-                panel.Show();
+                ouputPanel.SuspendLayout();
+                ouputPanel.Controls.Add(viewer);
+                ouputPanel.ResumeLayout();
+                ouputPanel.Show();
                 viewer.Graph = test.graph;
                 viewer.Dock = DockStyle.Fill;
-                label3.Text = "Time Elapsed: " + test.stopwatch.Elapsed.ToString(@"m\:ss\.ffffff");
+                textTimeElapsed.Text = "Time Elapsed: " + test.stopwatch.Elapsed.ToString(@"m\:ss\.ffffff");
             }
             else
             {
-                string dir = label2.Text;
+                string dir = TextStartingDir.Text;
                 string filename = textBox2.Text;
                 Search test = new(dir, filename);
                 test.dfs_search(0);
                 test.makeGraph();
-                panel.SuspendLayout();
-                panel.Controls.Add(viewer);
-                panel.ResumeLayout();
-                panel.Show();
+                ouputPanel.SuspendLayout();
+                ouputPanel.Controls.Add(viewer);
+                ouputPanel.ResumeLayout();
+                ouputPanel.Show();
                 viewer.Graph = test.graph;
                 viewer.Dock = DockStyle.Fill;
-                label3.Text = "Time Elapsed: " + test.stopwatch.Elapsed.ToString(@"m\:ss\.ffffff");
+                textTimeElapsed.Text = "Time Elapsed: " + test.stopwatch.Elapsed.ToString(@"m\:ss\.ffffff");
             }
         }
 
@@ -51,34 +51,34 @@ namespace BingSlamet
         {
             if (comboBox1.Items[comboBox1.SelectedIndex].ToString() == "BFS")
             {
-                string dir = label2.Text;
+                string dir = TextStartingDir.Text;
                 string filename = textBox2.Text;
                 List<string> vs = new List<string>();
                 Search test = new(dir, filename);
                 test.bfs_search(1);
                 test.makeGraph();
-                panel.SuspendLayout();
-                panel.Controls.Add(viewer);
-                panel.ResumeLayout();
-                panel.Show();
+                ouputPanel.SuspendLayout();
+                ouputPanel.Controls.Add(viewer);
+                ouputPanel.ResumeLayout();
+                ouputPanel.Show();
                 viewer.Graph = test.graph;
                 viewer.Dock = DockStyle.Fill;
-                label3.Text = "Time Elapsed: " + test.stopwatch.Elapsed.ToString(@"m\:ss\.ffffff");
+                textTimeElapsed.Text = "Time Elapsed: " + test.stopwatch.Elapsed.ToString(@"m\:ss\.ffffff");
             }
             else
             {
-                string dir = label2.Text;
+                string dir = TextStartingDir.Text;
                 string filename = textBox2.Text;
                 Search test = new(dir, filename);
                 test.dfs_search(1);
                 test.makeGraph();
-                panel.SuspendLayout();
-                panel.Controls.Add(viewer);
-                panel.ResumeLayout();
-                panel.Show();
+                ouputPanel.SuspendLayout();
+                ouputPanel.Controls.Add(viewer);
+                ouputPanel.ResumeLayout();
+                ouputPanel.Show();
                 viewer.Graph = test.graph;
                 viewer.Dock = DockStyle.Fill;
-                label3.Text = "Time Elapsed: " + test.stopwatch.Elapsed.ToString(@"m\:ss\.ffffff");
+                textTimeElapsed.Text = "Time Elapsed: " + test.stopwatch.Elapsed.ToString(@"m\:ss\.ffffff");
             }
         }
 
@@ -92,7 +92,7 @@ namespace BingSlamet
         {
             if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
             {
-                label2.Text = folderBrowserDialog1.SelectedPath;
+                TextStartingDir.Text = folderBrowserDialog1.SelectedPath;
             }
         }
 
@@ -122,6 +122,21 @@ namespace BingSlamet
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void foreground_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
         }
     }
 }

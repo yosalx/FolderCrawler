@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Arik\\Documents\\GitHub\\Tubes2_13520048\\src\\WinFormsApp1\\WinFormsApp1.csproj": {}
+    "C:\\Teknik Informatika\\Semester 4\\Strategi Algoritma\\Tugas Besar 2\\Tubes2_13520048\\src\\WinFormsApp1\\WinFormsApp1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Arik\\Documents\\GitHub\\Tubes2_13520048\\src\\WinFormsApp1\\WinFormsApp1.csproj": {
+    "C:\\Teknik Informatika\\Semester 4\\Strategi Algoritma\\Tugas Besar 2\\Tubes2_13520048\\src\\WinFormsApp1\\WinFormsApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Arik\\Documents\\GitHub\\Tubes2_13520048\\src\\WinFormsApp1\\WinFormsApp1.csproj",
+        "projectUniqueName": "C:\\Teknik Informatika\\Semester 4\\Strategi Algoritma\\Tugas Besar 2\\Tubes2_13520048\\src\\WinFormsApp1\\WinFormsApp1.csproj",
         "projectName": "WinFormsApp1",
-        "projectPath": "C:\\Users\\Arik\\Documents\\GitHub\\Tubes2_13520048\\src\\WinFormsApp1\\WinFormsApp1.csproj",
-        "packagesPath": "C:\\Users\\Arik\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Arik\\Documents\\GitHub\\Tubes2_13520048\\src\\WinFormsApp1\\obj\\",
+        "projectPath": "C:\\Teknik Informatika\\Semester 4\\Strategi Algoritma\\Tugas Besar 2\\Tubes2_13520048\\src\\WinFormsApp1\\WinFormsApp1.csproj",
+        "packagesPath": "C:\\Users\\Budi\\.nuget\\packages\\",
+        "outputPath": "C:\\Teknik Informatika\\Semester 4\\Strategi Algoritma\\Tugas Besar 2\\Tubes2_13520048\\src\\WinFormsApp1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Arik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Budi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

@@ -41,7 +41,6 @@ C:\Teknik Informatika\Semester 4\Strategi Algoritma\Tugas Besar 2\Tubes2_1352004
 C:\Teknik Informatika\Semester 4\Strategi Algoritma\Tugas Besar 2\Tubes2_13520048\src\WinFormsApp1\bin\Debug\net6.0-windows\Microsoft.Msagl.GraphViewerGdi.dll
 C:\Teknik Informatika\Semester 4\Strategi Algoritma\Tugas Besar 2\Tubes2_13520048\src\WinFormsApp1\bin\Debug\net6.0-windows\Microsoft.Msagl.WpfGraphControl.dll
 C:\Teknik Informatika\Semester 4\Strategi Algoritma\Tugas Besar 2\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.csproj.AssemblyReference.cache
-C:\Teknik Informatika\Semester 4\Strategi Algoritma\Tugas Besar 2\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Form1.resources
 C:\Teknik Informatika\Semester 4\Strategi Algoritma\Tugas Besar 2\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.csproj.GenerateResource.cache
 C:\Teknik Informatika\Semester 4\Strategi Algoritma\Tugas Besar 2\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.GeneratedMSBuildEditorConfig.editorconfig
 C:\Teknik Informatika\Semester 4\Strategi Algoritma\Tugas Besar 2\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.AssemblyInfoInputs.cache
@@ -82,3 +81,5 @@ C:\Users\Yoseph Alexander\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\
 C:\Users\Yoseph Alexander\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\ref\WinFormsApp1.dll
 C:\Users\Arik\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\BingSlamet.Form1.resources
 C:\Users\Arik\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Properties.Resources.resources
+C:\Teknik Informatika\Semester 4\Strategi Algoritma\Tugas Besar 2\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\BingSlamet.Main.resources
+C:\Teknik Informatika\Semester 4\Strategi Algoritma\Tugas Besar 2\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Properties.Resources.resources
