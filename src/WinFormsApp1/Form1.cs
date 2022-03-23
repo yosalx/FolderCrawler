@@ -1,5 +1,6 @@
 using Microsoft.Msagl.GraphViewerGdi;
 using System.Media;
+using System.Diagnostics;
 
 namespace BingSlamet
 {
@@ -11,6 +12,8 @@ namespace BingSlamet
         SoundPlayer ketemu = new SoundPlayer("./Resources/suaraKetemu.wav");
         SoundPlayer start = new SoundPlayer("./Resources/windowsStartup.wav");
         SoundPlayer click = new SoundPlayer("./Resources/click.wav");
+        private static List<String> path = new List<String>();
+        private static List<Label> links = new List<Label>();
 
         GViewer viewer = new GViewer();
         public Main()
@@ -23,6 +26,7 @@ namespace BingSlamet
 
         private void button1_Click(object sender, EventArgs e)
         {
+            clearhyperlink();
             if (TextStartingDir.Text.ToString() == "\r\n\r\n")
             {
                 klikinput.Play();
@@ -38,6 +42,9 @@ namespace BingSlamet
                     Search test = new(dir, filename);
                     test.bfs_search(0);
                     test.makeGraph();
+                    path = new List<string>();
+                    path = test.dir_found;
+                    makeLinks(path);
                     ouputPanel.SuspendLayout();
                     ouputPanel.Controls.Add(viewer);
                     ouputPanel.ResumeLayout();
@@ -60,6 +67,9 @@ namespace BingSlamet
                     Search test = new(dir, filename);
                     test.dfs_search(0);
                     test.makeGraph();
+                    path = new List<string>();
+                    path = test.dir_found;
+                    makeLinks(path);
                     ouputPanel.SuspendLayout();
                     ouputPanel.Controls.Add(viewer);
                     ouputPanel.ResumeLayout();
@@ -79,6 +89,7 @@ namespace BingSlamet
 
         private void button2_Click(object sender, EventArgs e)
         {
+            clearhyperlink();
             if (TextStartingDir.Text.ToString() == "\r\n\r\n")
             {
                 klikinput.Play();
@@ -94,6 +105,9 @@ namespace BingSlamet
                 {
                     test.bfs_search(1);
                     test.makeGraph();
+                    path = new List<string>();
+                    path = test.dir_found;
+                    makeLinks(path);
                     ouputPanel.SuspendLayout();
                     ouputPanel.Controls.Add(viewer);
                     ouputPanel.ResumeLayout();
@@ -116,6 +130,9 @@ namespace BingSlamet
                     Search test = new(dir, filename);
                     test.dfs_search(1);
                     test.makeGraph();
+                    path = new List<string>();
+                    path = test.dir_found;
+                    makeLinks(path);
                     ouputPanel.SuspendLayout();
                     ouputPanel.Controls.Add(viewer);
                     ouputPanel.ResumeLayout();
@@ -253,6 +270,66 @@ namespace BingSlamet
         {
             comboBox1.DroppedDown = true;
 
+        }
+
+        private void makeLinks(List<String> path)
+        {
+            List<Label> links = new List<Label>();
+            int vertical = 0;
+            if (path.Count == 0)
+            {
+                Label test = new Label();
+                Controls.Add(test);
+                test.Font = new Font("Tahoma", 7, FontStyle.Underline, GraphicsUnit.Point);
+                test.ForeColor = Color.Black;
+                test.Location = new Point(473, 167);
+                test.Name = "text";
+                test.Size = new Size(430, 32);
+                test.TabIndex = 16;
+                test.Text = "No Path Found";
+                test.TextAlign = ContentAlignment.MiddleLeft;
+            }
+            else
+            {
+                foreach (String item in path)
+                {
+                    Label link = new Label();
+                    Controls.Add(link);
+                    link.Font = new Font("Tahoma", 7, FontStyle.Underline, GraphicsUnit.Point);
+                    link.ForeColor = Color.Black;
+                    link.Location = new Point(296, 167 + vertical * 25);
+                    link.Name = item;
+                    link.BackColor = Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(233)))), ((int)(((byte)(216)))));
+                    link.Size = new Size(430, 32);
+                    link.TabIndex = 16;
+                    link.Text = item;
+                    link.TextAlign = ContentAlignment.MiddleLeft;
+                    link.Click += new EventHandler(hyperlink_Click);
+                    link.BringToFront();
+                    links.Add(link);
+                    vertical++;
+                }
+            }
+        }
+
+        private void clearhyperlink()
+        {
+            foreach (Label link in links)
+            {
+                link.Text = "";
+            }
+
+        }
+        private void hyperlink_Click(object sender, EventArgs e)
+        {
+            Label link = sender as Label;
+            string path = link.Text.Substring(0, link.Text.LastIndexOf('\\'));
+            Process.Start(new System.Diagnostics.ProcessStartInfo()
+            {
+                FileName = path,
+                UseShellExecute = true,
+                Verb = "open"
+            });
         }
     }
 }

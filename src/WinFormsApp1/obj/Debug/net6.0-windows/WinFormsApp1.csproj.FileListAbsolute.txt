@@ -67,7 +67,6 @@ C:\Users\Yoseph Alexander\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\bin\
 C:\Users\Yoseph Alexander\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\bin\Debug\net6.0-windows\Microsoft.Msagl.GraphViewerGdi.dll
 C:\Users\Yoseph Alexander\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\bin\Debug\net6.0-windows\Microsoft.Msagl.WpfGraphControl.dll
 C:\Users\Yoseph Alexander\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.csproj.AssemblyReference.cache
-C:\Users\Yoseph Alexander\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Form1.resources
 C:\Users\Yoseph Alexander\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.csproj.GenerateResource.cache
 C:\Users\Yoseph Alexander\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Yoseph Alexander\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.AssemblyInfoInputs.cache
@@ -83,3 +82,5 @@ C:\Users\Arik\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0
 C:\Teknik Informatika\Semester 4\Strategi Algoritma\Tugas Besar 2\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\BingSlamet.Main.resources
 C:\Teknik Informatika\Semester 4\Strategi Algoritma\Tugas Besar 2\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Properties.Resources.resources
 C:\Users\Arik\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\BingSlamet.Main.resources
+C:\Users\Yoseph Alexander\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\BingSlamet.Main.resources
+C:\Users\Yoseph Alexander\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Properties.Resources.resources

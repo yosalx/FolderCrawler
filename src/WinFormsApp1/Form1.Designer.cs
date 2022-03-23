@@ -42,15 +42,16 @@
             this.textTimeElapsed = new System.Windows.Forms.Label();
             this.labelHyperlink = new System.Windows.Forms.LinkLabel();
             this.foreground = new System.Windows.Forms.Panel();
-            this.audioOff = new System.Windows.Forms.PictureBox();
             this.audioOn = new System.Windows.Forms.PictureBox();
+            this.audioOff = new System.Windows.Forms.PictureBox();
             this.windowsBar = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.closeButton = new System.Windows.Forms.PictureBox();
             this.Logo = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.foreground.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.audioOff)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.audioOn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.audioOff)).BeginInit();
             this.windowsBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.closeButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
@@ -185,6 +186,7 @@
             // foreground
             // 
             this.foreground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(233)))), ((int)(((byte)(216)))));
+            this.foreground.Controls.Add(this.label2);
             this.foreground.Controls.Add(this.audioOn);
             this.foreground.Controls.Add(this.audioOff);
             this.foreground.Controls.Add(this.windowsBar);
@@ -201,17 +203,6 @@
             this.foreground.TabIndex = 14;
             this.foreground.Paint += new System.Windows.Forms.PaintEventHandler(this.foreground_Paint);
             // 
-            // audioOff
-            // 
-            this.audioOff.Image = ((System.Drawing.Image)(resources.GetObject("audioOff.Image")));
-            this.audioOff.Location = new System.Drawing.Point(1049, 35);
-            this.audioOff.Name = "audioOff";
-            this.audioOff.Size = new System.Drawing.Size(42, 36);
-            this.audioOff.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.audioOff.TabIndex = 14;
-            this.audioOff.TabStop = false;
-            this.audioOff.Click += new System.EventHandler(this.audioOff_Click);
-            // 
             // audioOn
             // 
             this.audioOn.Image = global::WinFormsApp1.Properties.Resources.audioOn;
@@ -222,6 +213,17 @@
             this.audioOn.TabIndex = 13;
             this.audioOn.TabStop = false;
             this.audioOn.Click += new System.EventHandler(this.audioOn_Click);
+            // 
+            // audioOff
+            // 
+            this.audioOff.Image = ((System.Drawing.Image)(resources.GetObject("audioOff.Image")));
+            this.audioOff.Location = new System.Drawing.Point(1049, 35);
+            this.audioOff.Name = "audioOff";
+            this.audioOff.Size = new System.Drawing.Size(42, 36);
+            this.audioOff.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.audioOff.TabIndex = 14;
+            this.audioOff.TabStop = false;
+            this.audioOff.Click += new System.EventHandler(this.audioOff_Click);
             // 
             // windowsBar
             // 
@@ -271,6 +273,17 @@
             this.Logo.TabStop = false;
             this.Logo.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(208, 180);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(91, 18);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Path Found";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -290,8 +303,8 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.foreground.ResumeLayout(false);
             this.foreground.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.audioOff)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.audioOn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.audioOff)).EndInit();
             this.windowsBar.ResumeLayout(false);
             this.windowsBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.closeButton)).EndInit();
@@ -321,5 +334,6 @@
         private PictureBox Logo;
         private PictureBox audioOff;
         private PictureBox audioOn;
+        private Label label2;
     }
 }
