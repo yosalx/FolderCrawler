@@ -18,44 +18,58 @@ namespace BingSlamet
             start.Play();
             InitializeComponent();
             Application.VisualStyleState = System.Windows.Forms.VisualStyles.VisualStyleState.NoneEnabled;
+            comboBox1.SelectedIndex = 0;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (comboBox1.Items[comboBox1.SelectedIndex].ToString() == "BFS")
+            if (TextStartingDir.Text.ToString() == "\r\n\r\n")
             {
                 klikinput.Play();
+            }
+            else if (comboBox1.Items[comboBox1.SelectedIndex].ToString() == "BFS")
+            {
+                click.Play();
                 string dir = TextStartingDir.Text;
                 string filename = textBox2.Text;
                 List<string> vs = new List<string>();
-                Search test = new(dir, filename);
-                test.bfs_search(0);
-                test.makeGraph();
-                ouputPanel.SuspendLayout();
-                ouputPanel.Controls.Add(viewer);
-                ouputPanel.ResumeLayout();
-                ouputPanel.Show();
-                viewer.Graph = test.graph;
-                viewer.Dock = DockStyle.Fill;
-                ketemu.Play();
-                textTimeElapsed.Text = "Time Elapsed: " + test.stopwatch.Elapsed.ToString(@"m\:ss\.ffffff");
+                try
+                {
+                    Search test = new(dir, filename);
+                    test.bfs_search(0);
+                    test.makeGraph();
+                    ouputPanel.SuspendLayout();
+                    ouputPanel.Controls.Add(viewer);
+                    ouputPanel.ResumeLayout();
+                    ouputPanel.Show();
+                    viewer.Graph = test.graph;
+                    viewer.Dock = DockStyle.Fill;
+                    ketemu.Play();
+                    textTimeElapsed.Text = "Time Elapsed: " + test.stopwatch.Elapsed.ToString(@"m\:ss\.ffffff");
+                }
+                catch { errorsound.Play(); }
+
             }
             else if (comboBox1.Items[comboBox1.SelectedIndex].ToString() == "DFS")
             {
-                klikinput.Play();
+                click.Play();
                 string dir = TextStartingDir.Text;
                 string filename = textBox2.Text;
-                Search test = new(dir, filename);
-                test.dfs_search(0);
-                test.makeGraph();
-                ouputPanel.SuspendLayout();
-                ouputPanel.Controls.Add(viewer);
-                ouputPanel.ResumeLayout();
-                ouputPanel.Show();
-                viewer.Graph = test.graph;
-                viewer.Dock = DockStyle.Fill;
-                ketemu.Play();
-                textTimeElapsed.Text = "Time Elapsed: " + test.stopwatch.Elapsed.ToString(@"m\:ss\.ffffff");
+                try
+                {
+                    Search test = new(dir, filename);
+                    test.dfs_search(0);
+                    test.makeGraph();
+                    ouputPanel.SuspendLayout();
+                    ouputPanel.Controls.Add(viewer);
+                    ouputPanel.ResumeLayout();
+                    ouputPanel.Show();
+                    viewer.Graph = test.graph;
+                    viewer.Dock = DockStyle.Fill;
+                    ketemu.Play();
+                    textTimeElapsed.Text = "Time Elapsed: " + test.stopwatch.Elapsed.ToString(@"m\:ss\.ffffff");
+                }
+                catch { errorsound.Play(); }
             }
             else
             {
@@ -65,40 +79,53 @@ namespace BingSlamet
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (comboBox1.Items[comboBox1.SelectedIndex].ToString() == "BFS")
+            if (TextStartingDir.Text.ToString() == "\r\n\r\n")
+            {
+                klikinput.Play();
+            }
+            else if (comboBox1.Items[comboBox1.SelectedIndex].ToString() == "BFS")
             {
                 click.Play();
                 string dir = TextStartingDir.Text;
                 string filename = textBox2.Text;
                 List<string> vs = new List<string>();
                 Search test = new(dir, filename);
-                test.bfs_search(1);
-                test.makeGraph();
-                ouputPanel.SuspendLayout();
-                ouputPanel.Controls.Add(viewer);
-                ouputPanel.ResumeLayout();
-                ouputPanel.Show();
-                viewer.Graph = test.graph;
-                viewer.Dock = DockStyle.Fill;
-                ketemu.Play();
-                textTimeElapsed.Text = "Time Elapsed: " + test.stopwatch.Elapsed.ToString(@"m\:ss\.ffffff");
+                try
+                {
+                    test.bfs_search(1);
+                    test.makeGraph();
+                    ouputPanel.SuspendLayout();
+                    ouputPanel.Controls.Add(viewer);
+                    ouputPanel.ResumeLayout();
+                    ouputPanel.Show();
+                    viewer.Graph = test.graph;
+                    viewer.Dock = DockStyle.Fill;
+                    ketemu.Play();
+                    textTimeElapsed.Text = "Time Elapsed: " + test.stopwatch.Elapsed.ToString(@"m\:ss\.ffffff");
+                }
+                catch { errorsound.Play(); }
             }
             else if (comboBox1.Items[comboBox1.SelectedIndex].ToString() == "DFS")
             {
                 click.Play();
                 string dir = TextStartingDir.Text;
                 string filename = textBox2.Text;
-                Search test = new(dir, filename);
-                test.dfs_search(1);
-                test.makeGraph();
-                ouputPanel.SuspendLayout();
-                ouputPanel.Controls.Add(viewer);
-                ouputPanel.ResumeLayout();
-                ouputPanel.Show();
-                viewer.Graph = test.graph;
-                viewer.Dock = DockStyle.Fill;
-                ketemu.Play();
-                textTimeElapsed.Text = "Time Elapsed: " + test.stopwatch.Elapsed.ToString(@"m\:ss\.ffffff");
+                try
+                {
+
+                    Search test = new(dir, filename);
+                    test.dfs_search(1);
+                    test.makeGraph();
+                    ouputPanel.SuspendLayout();
+                    ouputPanel.Controls.Add(viewer);
+                    ouputPanel.ResumeLayout();
+                    ouputPanel.Show();
+                    viewer.Graph = test.graph;
+                    viewer.Dock = DockStyle.Fill;
+                    ketemu.Play();
+                    textTimeElapsed.Text = "Time Elapsed: " + test.stopwatch.Elapsed.ToString(@"m\:ss\.ffffff");
+                }
+                catch { errorsound.Play(); }
             }
             else
             {
@@ -107,14 +134,19 @@ namespace BingSlamet
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {}
+        {
+            if (comboBox1.Items[comboBox1.SelectedIndex].ToString() != "--Select--")
+                {
+                click.Play();
+            }
+        }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {}
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Click.Play();
+            click.Play();
             if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
             {
                 TextStartingDir.Text = folderBrowserDialog1.SelectedPath;
@@ -126,7 +158,6 @@ namespace BingSlamet
             if (textBox2.Text == "Type Filename")
             {
                 textBox2.Text = "";
-                textBox2.ForeColor = Color.White;
             }
         }
 
@@ -135,7 +166,6 @@ namespace BingSlamet
             if (textBox2.Text == "")
             {
                 textBox2.Text = "Type Filename";
-                textBox2.ForeColor = Color.White;
             }
         }
 
@@ -214,6 +244,11 @@ namespace BingSlamet
         private void audioOff_Click(object sender, EventArgs e)
         {
             backgroundSong.Stop(); ;
+        }
+        private void comboBox1_Click(object sender, EventArgs e)
+        {
+            comboBox1.DroppedDown = true;
+
         }
     }
 }
