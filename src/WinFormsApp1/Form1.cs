@@ -6,22 +6,26 @@ namespace BingSlamet
 {
     public partial class Main : Form
     {
-        SoundPlayer backgroundSong = new SoundPlayer("./Resources/newbacksound.wav");
         SoundPlayer errorsound = new SoundPlayer("./Resources/errorParah.wav");
         SoundPlayer klikinput = new SoundPlayer("./Resources/mintaInput.wav");
         SoundPlayer ketemu = new SoundPlayer("./Resources/suaraKetemu.wav");
-        SoundPlayer start = new SoundPlayer("./Resources/windowsStartup.wav");
         SoundPlayer click = new SoundPlayer("./Resources/click.wav");
+        WMPLib.WindowsMediaPlayer startupSound = new WMPLib.WindowsMediaPlayer();
+        WMPLib.WindowsMediaPlayer backgroundSong = new WMPLib.WindowsMediaPlayer();
+        WMPLib.WindowsMediaPlayer klik = new WMPLib.WindowsMediaPlayer();
         private static List<String> path = new List<String>();
         private static List<Label> links = new List<Label>();
 
         GViewer viewer = new GViewer();
         public Main()
         {
-            start.Play();
+            startupSound.URL = @"./Resources/windowsStartup.wav";
             InitializeComponent();
             Application.VisualStyleState = System.Windows.Forms.VisualStyles.VisualStyleState.NoneEnabled;
             comboBox1.SelectedIndex = 0;
+            backgroundSong.URL = @"./Resources/newbacksound.wav";
+            backgroundSong.settings.volume = 60;
+            klik.URL = @"./Resources/click.wav";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -30,13 +34,15 @@ namespace BingSlamet
             if (TextStartingDir.Text.ToString() == "\r\n\r\n")
             {
                 klikinput.Play();
+                Form2 f2 = new Form2();
+                f2.StartPosition = FormStartPosition.CenterParent;
+                f2.ShowDialog();
             }
             else if (comboBox1.Items[comboBox1.SelectedIndex].ToString() == "BFS")
             {
-                click.Play();
+                klik.controls.play();
                 string dir = TextStartingDir.Text;
                 string filename = textBox2.Text;
-                List<string> vs = new List<string>();
                 try
                 {
                     Search test = new(dir, filename);
@@ -54,12 +60,14 @@ namespace BingSlamet
                     ketemu.Play();
                     textTimeElapsed.Text = "Time Elapsed: " + test.stopwatch.Elapsed.ToString(@"m\:ss\.ffffff");
                 }
-                catch { errorsound.Play(); }
+                catch {
+                    errorsound.Play();
+                }
 
             }
             else if (comboBox1.Items[comboBox1.SelectedIndex].ToString() == "DFS")
             {
-                click.Play();
+                klik.controls.play();
                 string dir = TextStartingDir.Text;
                 string filename = textBox2.Text;
                 try
@@ -84,6 +92,9 @@ namespace BingSlamet
             else
             {
                 klikinput.Play();
+                Form2 f2 = new Form2();
+                f2.StartPosition = FormStartPosition.CenterParent;
+                f2.ShowDialog();
             }
         }
 
@@ -93,13 +104,15 @@ namespace BingSlamet
             if (TextStartingDir.Text.ToString() == "\r\n\r\n")
             {
                 klikinput.Play();
+                Form2 f2 = new Form2();
+                f2.StartPosition = FormStartPosition.CenterParent;
+                f2.ShowDialog();
             }
             else if (comboBox1.Items[comboBox1.SelectedIndex].ToString() == "BFS")
             {
-                click.Play();
+                klik.controls.play();
                 string dir = TextStartingDir.Text;
                 string filename = textBox2.Text;
-                List<string> vs = new List<string>();
                 Search test = new(dir, filename);
                 try
                 {
@@ -121,7 +134,7 @@ namespace BingSlamet
             }
             else if (comboBox1.Items[comboBox1.SelectedIndex].ToString() == "DFS")
             {
-                click.Play();
+                klik.controls.play();
                 string dir = TextStartingDir.Text;
                 string filename = textBox2.Text;
                 try
@@ -147,6 +160,9 @@ namespace BingSlamet
             else
             {
                 klikinput.Play();
+                Form2 f2 = new Form2();
+                f2.StartPosition = FormStartPosition.CenterParent;
+                f2.ShowDialog();
             }
         }
 
@@ -154,7 +170,7 @@ namespace BingSlamet
         {
             if (comboBox1.Items[comboBox1.SelectedIndex].ToString() != "--Select--")
                 {
-                click.Play();
+                klik.controls.play();
             }
         }
 
@@ -163,7 +179,7 @@ namespace BingSlamet
 
         private void button3_Click(object sender, EventArgs e)
         {
-            click.Play();
+            klik.controls.play();
             if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
             {
                 TextStartingDir.Text = folderBrowserDialog1.SelectedPath;
@@ -255,14 +271,14 @@ namespace BingSlamet
 
         private void audioOn_Click(object sender, EventArgs e)
         {
-            backgroundSong.Play();
+            backgroundSong.controls.pause();
             audioOff.Visible = true;
             audioOn.Visible = false;
         }
 
         private void audioOff_Click(object sender, EventArgs e)
         {
-            backgroundSong.Stop();
+            backgroundSong.controls.play();
             audioOff.Visible = false;
             audioOn.Visible = true;
         }

@@ -1,3 +1,4 @@
+using System.Media;
 namespace BingSlamet
 {
     internal static class Program

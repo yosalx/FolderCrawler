@@ -84,3 +84,6 @@ C:\Teknik Informatika\Semester 4\Strategi Algoritma\Tugas Besar 2\Tubes2_1352004
 C:\Users\Arik\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\BingSlamet.Main.resources
 C:\Users\Yoseph Alexander\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\BingSlamet.Main.resources
 C:\Users\Yoseph Alexander\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.Properties.Resources.resources
+C:\Users\Arik\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\BingSlamet.Form2.resources
+C:\Users\Arik\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\Interop.WMPLib.dll
+C:\Users\Arik\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.csproj.ResolveComReference.cache
