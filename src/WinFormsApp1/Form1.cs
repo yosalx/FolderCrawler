@@ -10,6 +10,7 @@ namespace BingSlamet
         SoundPlayer klikinput = new SoundPlayer("./Resources/mintaInput.wav");
         SoundPlayer ketemu = new SoundPlayer("./Resources/suaraKetemu.wav");
         SoundPlayer start = new SoundPlayer("./Resources/windowsStartup.wav");
+        SoundPlayer click = new SoundPlayer("./Resources/click.wav");
 
         GViewer viewer = new GViewer();
         public Main()
@@ -17,7 +18,6 @@ namespace BingSlamet
             start.Play();
             InitializeComponent();
             Application.VisualStyleState = System.Windows.Forms.VisualStyles.VisualStyleState.NoneEnabled;
-            //            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -40,7 +40,7 @@ namespace BingSlamet
                 ketemu.Play();
                 textTimeElapsed.Text = "Time Elapsed: " + test.stopwatch.Elapsed.ToString(@"m\:ss\.ffffff");
             }
-            else
+            else if (comboBox1.Items[comboBox1.SelectedIndex].ToString() == "DFS")
             {
                 klikinput.Play();
                 string dir = TextStartingDir.Text;
@@ -57,13 +57,17 @@ namespace BingSlamet
                 ketemu.Play();
                 textTimeElapsed.Text = "Time Elapsed: " + test.stopwatch.Elapsed.ToString(@"m\:ss\.ffffff");
             }
+            else
+            {
+                klikinput.Play();
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             if (comboBox1.Items[comboBox1.SelectedIndex].ToString() == "BFS")
             {
-                klikinput.Play();
+                click.Play();
                 string dir = TextStartingDir.Text;
                 string filename = textBox2.Text;
                 List<string> vs = new List<string>();
@@ -79,9 +83,9 @@ namespace BingSlamet
                 ketemu.Play();
                 textTimeElapsed.Text = "Time Elapsed: " + test.stopwatch.Elapsed.ToString(@"m\:ss\.ffffff");
             }
-            else
+            else if (comboBox1.Items[comboBox1.SelectedIndex].ToString() == "DFS")
             {
-                klikinput.Play();
+                click.Play();
                 string dir = TextStartingDir.Text;
                 string filename = textBox2.Text;
                 Search test = new(dir, filename);
@@ -96,6 +100,10 @@ namespace BingSlamet
                 ketemu.Play();
                 textTimeElapsed.Text = "Time Elapsed: " + test.stopwatch.Elapsed.ToString(@"m\:ss\.ffffff");
             }
+            else
+            {
+                klikinput.Play();
+            }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -106,7 +114,7 @@ namespace BingSlamet
 
         private void button3_Click(object sender, EventArgs e)
         {
-            klikinput.Play();
+            Click.Play();
             if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
             {
                 TextStartingDir.Text = folderBrowserDialog1.SelectedPath;
