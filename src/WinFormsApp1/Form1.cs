@@ -156,5 +156,32 @@ namespace BingSlamet
         {
 
         }
+        private void windowsBar_Paint(object sender)
+        {
+
+        }
+        private bool mouseDown;
+        private Point lastLocation;
+
+        private void Main_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDown = true;
+            lastLocation = e.Location;
+        }
+
+        private void Main_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
+        }
+        private void Main_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseDown)
+            {
+                this.Location = new Point(
+                    (this.Location.X - lastLocation.X) + e.X, (this.Location.Y - lastLocation.Y) + e.Y);
+
+                this.Update();
+            }
+        }
     }
 }
