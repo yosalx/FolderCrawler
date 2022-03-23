@@ -61,9 +61,10 @@
             this.button1.BackColor = System.Drawing.Color.Silver;
             this.button1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(1425, 208);
+            this.button1.Location = new System.Drawing.Point(950, 139);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(212, 64);
+            this.button1.Size = new System.Drawing.Size(141, 43);
             this.button1.TabIndex = 0;
             this.button1.Text = "Find First";
             this.button1.UseVisualStyleBackColor = false;
@@ -74,10 +75,11 @@
             this.textBox2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBox2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(12, 266);
-            this.textBox2.MinimumSize = new System.Drawing.Size(212, 26);
+            this.textBox2.Location = new System.Drawing.Point(8, 177);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox2.MinimumSize = new System.Drawing.Size(143, 26);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(276, 33);
+            this.textBox2.Size = new System.Drawing.Size(185, 26);
             this.textBox2.TabIndex = 2;
             this.textBox2.Text = "Type Filename";
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
@@ -95,9 +97,10 @@
             this.button2.BackColor = System.Drawing.Color.Silver;
             this.button2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(1425, 288);
+            this.button2.Location = new System.Drawing.Point(950, 192);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(212, 64);
+            this.button2.Size = new System.Drawing.Size(141, 43);
             this.button2.TabIndex = 6;
             this.button2.Text = "Find All";
             this.button2.UseVisualStyleBackColor = false;
@@ -111,19 +114,19 @@
             "--Select--",
             "BFS",
             "DFS"});
-            this.comboBox1.Location = new System.Drawing.Point(12, 310);
+            this.comboBox1.Location = new System.Drawing.Point(8, 207);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(276, 38);
+            this.comboBox1.Size = new System.Drawing.Size(185, 28);
             this.comboBox1.TabIndex = 7;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // ouputPanel
             // 
             this.ouputPanel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ouputPanel.Location = new System.Drawing.Point(12, 360);
-            this.ouputPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.ouputPanel.Location = new System.Drawing.Point(8, 240);
             this.ouputPanel.Name = "ouputPanel";
-            this.ouputPanel.Size = new System.Drawing.Size(1647, 573);
+            this.ouputPanel.Size = new System.Drawing.Size(1098, 382);
             this.ouputPanel.TabIndex = 8;
             this.ouputPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -132,10 +135,9 @@
             this.button3.BackColor = System.Drawing.Color.Silver;
             this.button3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(8, 184);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Location = new System.Drawing.Point(5, 123);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(282, 74);
+            this.button3.Size = new System.Drawing.Size(188, 49);
             this.button3.TabIndex = 9;
             this.button3.Text = "Browse Folder";
             this.button3.UseVisualStyleBackColor = false;
@@ -147,10 +149,9 @@
             this.TextStartingDir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(233)))), ((int)(((byte)(216)))));
             this.TextStartingDir.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TextStartingDir.ForeColor = System.Drawing.Color.Black;
-            this.TextStartingDir.Location = new System.Drawing.Point(298, 208);
-            this.TextStartingDir.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.TextStartingDir.Location = new System.Drawing.Point(199, 139);
             this.TextStartingDir.Name = "TextStartingDir";
-            this.TextStartingDir.Size = new System.Drawing.Size(12, 50);
+            this.TextStartingDir.Size = new System.Drawing.Size(8, 36);
             this.TextStartingDir.TabIndex = 11;
             this.TextStartingDir.Text = "\r\n\r\n";
             // 
@@ -160,9 +161,10 @@
             this.textTimeElapsed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(233)))), ((int)(((byte)(216)))));
             this.textTimeElapsed.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textTimeElapsed.ForeColor = System.Drawing.Color.Black;
-            this.textTimeElapsed.Location = new System.Drawing.Point(1350, 936);
+            this.textTimeElapsed.Location = new System.Drawing.Point(900, 624);
+            this.textTimeElapsed.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.textTimeElapsed.Name = "textTimeElapsed";
-            this.textTimeElapsed.Size = new System.Drawing.Size(151, 25);
+            this.textTimeElapsed.Size = new System.Drawing.Size(105, 18);
             this.textTimeElapsed.TabIndex = 12;
             this.textTimeElapsed.Text = "Time Elapsed: ";
             // 
@@ -171,9 +173,10 @@
             this.labelHyperlink.AutoSize = true;
             this.labelHyperlink.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(233)))), ((int)(((byte)(216)))));
             this.labelHyperlink.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelHyperlink.Location = new System.Drawing.Point(12, 936);
+            this.labelHyperlink.Location = new System.Drawing.Point(8, 624);
+            this.labelHyperlink.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelHyperlink.Name = "labelHyperlink";
-            this.labelHyperlink.Size = new System.Drawing.Size(104, 25);
+            this.labelHyperlink.Size = new System.Drawing.Size(68, 18);
             this.labelHyperlink.TabIndex = 13;
             this.labelHyperlink.TabStop = true;
             this.labelHyperlink.Text = "linkLabel1";
@@ -182,8 +185,8 @@
             // foreground
             // 
             this.foreground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(233)))), ((int)(((byte)(216)))));
-            this.foreground.Controls.Add(this.audioOff);
             this.foreground.Controls.Add(this.audioOn);
+            this.foreground.Controls.Add(this.audioOff);
             this.foreground.Controls.Add(this.windowsBar);
             this.foreground.Controls.Add(this.TextStartingDir);
             this.foreground.Controls.Add(this.button3);
@@ -192,20 +195,18 @@
             this.foreground.Controls.Add(this.button2);
             this.foreground.Controls.Add(this.textBox2);
             this.foreground.Controls.Add(this.Logo);
-            this.foreground.Location = new System.Drawing.Point(4, 0);
-            this.foreground.Margin = new System.Windows.Forms.Padding(4);
+            this.foreground.Location = new System.Drawing.Point(3, 0);
             this.foreground.Name = "foreground";
-            this.foreground.Size = new System.Drawing.Size(1662, 980);
+            this.foreground.Size = new System.Drawing.Size(1108, 653);
             this.foreground.TabIndex = 14;
             this.foreground.Paint += new System.Windows.Forms.PaintEventHandler(this.foreground_Paint);
             // 
             // audioOff
             // 
             this.audioOff.Image = ((System.Drawing.Image)(resources.GetObject("audioOff.Image")));
-            this.audioOff.Location = new System.Drawing.Point(1594, 52);
-            this.audioOff.Margin = new System.Windows.Forms.Padding(4);
+            this.audioOff.Location = new System.Drawing.Point(1049, 35);
             this.audioOff.Name = "audioOff";
-            this.audioOff.Size = new System.Drawing.Size(63, 54);
+            this.audioOff.Size = new System.Drawing.Size(42, 36);
             this.audioOff.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.audioOff.TabIndex = 14;
             this.audioOff.TabStop = false;
@@ -214,10 +215,9 @@
             // audioOn
             // 
             this.audioOn.Image = global::WinFormsApp1.Properties.Resources.audioOn;
-            this.audioOn.Location = new System.Drawing.Point(1528, 52);
-            this.audioOn.Margin = new System.Windows.Forms.Padding(4);
+            this.audioOn.Location = new System.Drawing.Point(1049, 35);
             this.audioOn.Name = "audioOn";
-            this.audioOn.Size = new System.Drawing.Size(63, 54);
+            this.audioOn.Size = new System.Drawing.Size(42, 36);
             this.audioOn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.audioOn.TabIndex = 13;
             this.audioOn.TabStop = false;
@@ -228,10 +228,9 @@
             this.windowsBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(229)))));
             this.windowsBar.Controls.Add(this.label1);
             this.windowsBar.Controls.Add(this.closeButton);
-            this.windowsBar.Location = new System.Drawing.Point(-12, 0);
-            this.windowsBar.Margin = new System.Windows.Forms.Padding(4);
+            this.windowsBar.Location = new System.Drawing.Point(-8, 0);
             this.windowsBar.Name = "windowsBar";
-            this.windowsBar.Size = new System.Drawing.Size(1682, 44);
+            this.windowsBar.Size = new System.Drawing.Size(1121, 29);
             this.windowsBar.TabIndex = 0;
             this.windowsBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Main_MouseDown);
             this.windowsBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Main_MouseMove);
@@ -243,10 +242,9 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(85)))), ((int)(((byte)(229)))));
             this.label1.Font = new System.Drawing.Font("Tahoma", 8.4F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(64, 8);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(43, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(298, 24);
+            this.label1.Size = new System.Drawing.Size(201, 17);
             this.label1.TabIndex = 12;
             this.label1.Text = "Bing Slamet Folder Crawling";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -254,10 +252,9 @@
             // closeButton
             // 
             this.closeButton.Image = global::WinFormsApp1.Properties.Resources.Button;
-            this.closeButton.Location = new System.Drawing.Point(1636, 3);
-            this.closeButton.Margin = new System.Windows.Forms.Padding(4);
+            this.closeButton.Location = new System.Drawing.Point(1091, 2);
             this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(32, 36);
+            this.closeButton.Size = new System.Drawing.Size(21, 24);
             this.closeButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.closeButton.TabIndex = 2;
             this.closeButton.TabStop = false;
@@ -266,10 +263,9 @@
             // Logo
             // 
             this.Logo.Image = global::WinFormsApp1.Properties.Resources.lologoan;
-            this.Logo.Location = new System.Drawing.Point(-12, -5);
-            this.Logo.Margin = new System.Windows.Forms.Padding(4);
+            this.Logo.Location = new System.Drawing.Point(-8, -3);
             this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(367, 247);
+            this.Logo.Size = new System.Drawing.Size(245, 165);
             this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Logo.TabIndex = 12;
             this.Logo.TabStop = false;
@@ -277,16 +273,17 @@
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(76)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1670, 984);
+            this.ClientSize = new System.Drawing.Size(1113, 656);
             this.Controls.Add(this.labelHyperlink);
             this.Controls.Add(this.textTimeElapsed);
             this.Controls.Add(this.ouputPanel);
             this.Controls.Add(this.foreground);
             this.ForeColor = System.Drawing.Color.BlueViolet;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

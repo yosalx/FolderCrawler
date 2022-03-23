@@ -5,7 +5,7 @@ namespace BingSlamet
 {
     public partial class Main : Form
     {
-        SoundPlayer backgroundSong = new SoundPlayer("./Resources/Backsound.wav");
+        SoundPlayer backgroundSong = new SoundPlayer("./Resources/newbacksound.wav");
         SoundPlayer errorsound = new SoundPlayer("./Resources/errorParah.wav");
         SoundPlayer klikinput = new SoundPlayer("./Resources/mintaInput.wav");
         SoundPlayer ketemu = new SoundPlayer("./Resources/suaraKetemu.wav");
@@ -239,11 +239,15 @@ namespace BingSlamet
         private void audioOn_Click(object sender, EventArgs e)
         {
             backgroundSong.Play();
+            audioOff.Visible = true;
+            audioOn.Visible = false;
         }
 
         private void audioOff_Click(object sender, EventArgs e)
         {
-            backgroundSong.Stop(); ;
+            backgroundSong.Stop();
+            audioOff.Visible = false;
+            audioOn.Visible = true;
         }
         private void comboBox1_Click(object sender, EventArgs e)
         {
