@@ -130,6 +130,7 @@
             // ouputPanel
             // 
             this.ouputPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ouputPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.ouputPanel.Location = new System.Drawing.Point(12, 360);
             this.ouputPanel.Margin = new System.Windows.Forms.Padding(4);
             this.ouputPanel.Name = "ouputPanel";
@@ -141,7 +142,7 @@
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(233)))), ((int)(((byte)(216)))));
             this.button3.FlatAppearance.BorderSize = 3;
-            this.button3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.Color.Black;
             this.button3.Location = new System.Drawing.Point(8, 184);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
@@ -156,7 +157,7 @@
             // 
             this.TextStartingDir.AutoSize = true;
             this.TextStartingDir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(233)))), ((int)(((byte)(216)))));
-            this.TextStartingDir.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.TextStartingDir.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.TextStartingDir.ForeColor = System.Drawing.Color.Black;
             this.TextStartingDir.Location = new System.Drawing.Point(298, 208);
             this.TextStartingDir.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -215,7 +216,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::WinFormsApp1.Properties.Resources.dex1wrp_2e67ad59_681c_473e_8afd_f60a1ff504c6;
             this.pictureBox1.Location = new System.Drawing.Point(625, 44);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";

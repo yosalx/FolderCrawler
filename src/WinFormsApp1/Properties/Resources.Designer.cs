@@ -83,6 +83,46 @@ namespace WinFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dex1wrp_2e67ad59_681c_473e_8afd_f60a1ff504c6 {
+            get {
+                object obj = ResourceManager.GetObject("dex1wrp-2e67ad59-681c-473e-8afd-f60a1ff504c6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Error_Message {
+            get {
+                object obj = ResourceManager.GetObject("Error Message", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ErrorbelomMilihBDFSBFS {
+            get {
+                object obj = ResourceManager.GetObject("ErrorbelomMilihBDFSBFS", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ErrorFileGaketemu {
+            get {
+                object obj = ResourceManager.GetObject("ErrorFileGaketemu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lologoan {
             get {
                 object obj = ResourceManager.GetObject("lologoan", resourceCulture);

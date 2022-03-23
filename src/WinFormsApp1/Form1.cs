@@ -7,7 +7,7 @@ namespace BingSlamet
     public partial class Main : Form
     {
         SoundPlayer errorsound = new SoundPlayer("./Resources/errorParah.wav");
-        SoundPlayer klikinput = new SoundPlayer("./Resources/mintaInput.wav");
+        SoundPlayer warning = new SoundPlayer("./Resources/warning.wav");
         SoundPlayer ketemu = new SoundPlayer("./Resources/suaraKetemu.wav");
         SoundPlayer click = new SoundPlayer("./Resources/click.wav");
         WMPLib.WindowsMediaPlayer startupSound = new WMPLib.WindowsMediaPlayer();
@@ -33,7 +33,7 @@ namespace BingSlamet
             clearhyperlink();
             if (TextStartingDir.Text.ToString() == "\r\n\r\n")
             {
-                klikinput.Play();
+                warning.Play();
                 Form2 f2 = new Form2();
                 f2.StartPosition = FormStartPosition.CenterParent;
                 f2.ShowDialog();
@@ -57,8 +57,19 @@ namespace BingSlamet
                     ouputPanel.Show();
                     viewer.Graph = test.graph;
                     viewer.Dock = DockStyle.Fill;
-                    ketemu.Play();
                     textTimeElapsed.Text = "Time Elapsed: " + test.stopwatch.Elapsed.ToString(@"m\:ss\.ffffff");
+                    if (path.Count() == 0)
+                    {
+                        warning.Play();
+                        warning.Play();
+                        Form4 f4 = new Form4();
+                        f4.StartPosition = FormStartPosition.CenterParent;
+                        f4.ShowDialog();
+                    }
+                    else
+                    {
+                        ketemu.Play();
+                    }
                 }
                 catch {
                     errorsound.Play();
@@ -84,17 +95,28 @@ namespace BingSlamet
                     ouputPanel.Show();
                     viewer.Graph = test.graph;
                     viewer.Dock = DockStyle.Fill;
-                    ketemu.Play();
                     textTimeElapsed.Text = "Time Elapsed: " + test.stopwatch.Elapsed.ToString(@"m\:ss\.ffffff");
+                    if (path.Count() == 0)
+                    {
+                        warning.Play();
+                        warning.Play();
+                        Form4 f4 = new Form4();
+                        f4.StartPosition = FormStartPosition.CenterParent;
+                        f4.ShowDialog();
+                    }
+                    else
+                    {
+                        ketemu.Play();
+                    }
                 }
                 catch { errorsound.Play(); }
             }
             else
             {
-                klikinput.Play();
-                Form2 f2 = new Form2();
-                f2.StartPosition = FormStartPosition.CenterParent;
-                f2.ShowDialog();
+                warning.Play();
+                Form3 f3 = new Form3();
+                f3.StartPosition = FormStartPosition.CenterParent;
+                f3.ShowDialog();
             }
         }
 
@@ -103,7 +125,7 @@ namespace BingSlamet
             clearhyperlink();
             if (TextStartingDir.Text.ToString() == "\r\n\r\n")
             {
-                klikinput.Play();
+                warning.Play();
                 Form2 f2 = new Form2();
                 f2.StartPosition = FormStartPosition.CenterParent;
                 f2.ShowDialog();
@@ -127,8 +149,19 @@ namespace BingSlamet
                     ouputPanel.Show();
                     viewer.Graph = test.graph;
                     viewer.Dock = DockStyle.Fill;
-                    ketemu.Play();
                     textTimeElapsed.Text = "Time Elapsed: " + test.stopwatch.Elapsed.ToString(@"m\:ss\.ffffff");
+                    if (path.Count() == 0)
+                    {
+                        warning.Play();
+                        warning.Play();
+                        Form4 f4 = new Form4();
+                        f4.StartPosition = FormStartPosition.CenterParent;
+                        f4.ShowDialog();
+                    }
+                    else
+                    {
+                        ketemu.Play();
+                    }
                 }
                 catch { errorsound.Play(); }
             }
@@ -152,17 +185,28 @@ namespace BingSlamet
                     ouputPanel.Show();
                     viewer.Graph = test.graph;
                     viewer.Dock = DockStyle.Fill;
-                    ketemu.Play();
                     textTimeElapsed.Text = "Time Elapsed: " + test.stopwatch.Elapsed.ToString(@"m\:ss\.ffffff");
+                    if (path.Count() == 0)
+                    {
+                        warning.Play();
+                        warning.Play();
+                        Form4 f4 = new Form4();
+                        f4.StartPosition = FormStartPosition.CenterParent;
+                        f4.ShowDialog();
+                    }
+                    else
+                    {
+                        ketemu.Play();
+                    }
                 }
                 catch { errorsound.Play(); }
             }
             else
             {
-                klikinput.Play();
-                Form2 f2 = new Form2();
-                f2.StartPosition = FormStartPosition.CenterParent;
-                f2.ShowDialog();
+                warning.Play();
+                Form3 f3 = new Form3();
+                f3.StartPosition = FormStartPosition.CenterParent;
+                f3.ShowDialog();
             }
         }
 
