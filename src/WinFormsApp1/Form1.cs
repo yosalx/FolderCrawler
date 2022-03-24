@@ -308,23 +308,40 @@ namespace BingSlamet
             });
         }
 
-        private void audioOn_Click(object sender, EventArgs e)
-        {
-            backgroundSong.controls.pause();
-            audioOff.Visible = true;
-            audioOn.Visible = false;
-        }
 
-        private void audioOff_Click(object sender, EventArgs e)
-        {
-            backgroundSong.controls.play();
-            audioOff.Visible = false;
-            audioOn.Visible = true;
-        }
 
         private void comboBox1_Click(object sender, EventArgs e)
         {
             comboBox1.DroppedDown = true;
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonbaru_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            backgroundSong.controls.pause();
+            tombolOffkeren.Visible = true;
+            audioOnKeren.Visible = false;
+        }
+
+        private void tombolOffkeren_Click(object sender, EventArgs e)
+        {
+            backgroundSong.controls.play();
+            tombolOffkeren.Visible = false;
+            audioOnKeren.Visible = true;
+        }
+
+        private void browseFolderBaru_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -94,3 +94,8 @@ C:\Users\Yoseph Alexander\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\
 C:\Users\Yoseph Alexander\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\BingSlamet.Form2.resources
 C:\Users\Yoseph Alexander\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\BingSlamet.Form3.resources
 C:\Users\Yoseph Alexander\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\BingSlamet.Form4.resources
+C:\Teknik Informatika\Semester 4\Strategi Algoritma\Tugas Besar 2\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\Interop.WMPLib.dll
+C:\Teknik Informatika\Semester 4\Strategi Algoritma\Tugas Besar 2\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.csproj.ResolveComReference.cache
+C:\Teknik Informatika\Semester 4\Strategi Algoritma\Tugas Besar 2\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\BingSlamet.Form2.resources
+C:\Teknik Informatika\Semester 4\Strategi Algoritma\Tugas Besar 2\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\BingSlamet.Form3.resources
+C:\Teknik Informatika\Semester 4\Strategi Algoritma\Tugas Besar 2\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\BingSlamet.Form4.resources
