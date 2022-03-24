@@ -33,6 +33,7 @@ namespace BingSlamet
             clearLink();
             if (TextStartingDir.Text.ToString() == "\r\n\r\n")
             {
+                klik.controls.play();
                 warning.Play();
                 Form2 f2 = new Form2();
                 f2.StartPosition = FormStartPosition.CenterParent;
@@ -60,7 +61,7 @@ namespace BingSlamet
                     textTimeElapsed.Text = "Time Elapsed: " + test.stopwatch.Elapsed.ToString(@"m\:ss\.ffffff");
                     if (path.Count() == 0)
                     {
-                        warning.Play();
+                        klik.controls.play();
                         warning.Play();
                         Form4 f4 = new Form4();
                         f4.StartPosition = FormStartPosition.CenterParent;
@@ -98,7 +99,7 @@ namespace BingSlamet
                     textTimeElapsed.Text = "Time Elapsed: " + test.stopwatch.Elapsed.ToString(@"m\:ss\.ffffff");
                     if (path.Count() == 0)
                     {
-                        warning.Play();
+                        klik.controls.play();
                         warning.Play();
                         Form4 f4 = new Form4();
                         f4.StartPosition = FormStartPosition.CenterParent;
@@ -113,6 +114,7 @@ namespace BingSlamet
             }
             else
             {
+                klik.controls.play();
                 warning.Play();
                 Form3 f3 = new Form3();
                 f3.StartPosition = FormStartPosition.CenterParent;
@@ -125,6 +127,7 @@ namespace BingSlamet
             clearLink();
             if (TextStartingDir.Text.ToString() == "\r\n\r\n")
             {
+                klik.controls.play();
                 warning.Play();
                 Form2 f2 = new Form2();
                 f2.StartPosition = FormStartPosition.CenterParent;
@@ -152,7 +155,7 @@ namespace BingSlamet
                     textTimeElapsed.Text = "Time Elapsed: " + test.stopwatch.Elapsed.ToString(@"m\:ss\.ffffff");
                     if (path.Count() == 0)
                     {
-                        warning.Play();
+                        klik.controls.play();
                         warning.Play();
                         Form4 f4 = new Form4();
                         f4.StartPosition = FormStartPosition.CenterParent;
@@ -188,7 +191,7 @@ namespace BingSlamet
                     textTimeElapsed.Text = "Time Elapsed: " + test.stopwatch.Elapsed.ToString(@"m\:ss\.ffffff");
                     if (path.Count() == 0)
                     {
-                        warning.Play();
+                        klik.controls.play();
                         warning.Play();
                         Form4 f4 = new Form4();
                         f4.StartPosition = FormStartPosition.CenterParent;
@@ -203,6 +206,7 @@ namespace BingSlamet
             }
             else
             {
+                klik.controls.play();
                 warning.Play();
                 Form3 f3 = new Form3();
                 f3.StartPosition = FormStartPosition.CenterParent;
@@ -237,10 +241,10 @@ namespace BingSlamet
                     Controls.Add(link);
                     link.Font = new Font("Tahoma", 7, FontStyle.Underline, GraphicsUnit.Point);
                     link.ForeColor = Color.Blue;
-                    if ((label2.Location.Y + label2.Size.Height + vertical * label2.Size.Height) > ouputPanel.Location.Y)
+                    if ((label2.Location.Y + vertical * 35) > ouputPanel.Location.Y)
                     {
                         vertical = 0;
-                        link.Location = new Point(label2.Location.X + label2.Width + 430, label2.Location.Y + vertical * label2.Size.Height);
+                        link.Location = new Point(label2.Location.X + label2.Width + 430, label2.Location.Y + vertical * link.Height);
                         link.Name = item;
                         link.BackColor = Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(233)))), ((int)(((byte)(216)))));
                         link.Size = new Size(430, 32);
@@ -254,7 +258,7 @@ namespace BingSlamet
                     }
                     else
                     {
-                        link.Location = new Point(label2.Location.X + label2.Width, label2.Location.Y + vertical * label2.Size.Height);
+                        link.Location = new Point(label2.Location.X + label2.Width, label2.Location.Y + vertical * link.Height);
                         link.Name = item;
                         link.BackColor = Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(233)))), ((int)(((byte)(216)))));
                         link.Size = new Size(430, 32);
