@@ -30,7 +30,6 @@ namespace BingSlamet
 
         private void button1_Click(object sender, EventArgs e)
         {
-            clearLink();
             if (TextStartingDir.Text.ToString() == "\r\n\r\n")
             {
                 klik.controls.play();
@@ -124,7 +123,6 @@ namespace BingSlamet
 
         private void button2_Click(object sender, EventArgs e)
         {
-            clearLink();
             if (TextStartingDir.Text.ToString() == "\r\n\r\n")
             {
                 klik.controls.play();
@@ -215,62 +213,13 @@ namespace BingSlamet
         }
         private void makeLinks(List<String> directory)
         {
-            int vertical = 0;
-            if (directory.Count == 0)
+            linkBox.Items.Clear();
+            foreach (String item in path)
             {
-                Label notfound = new Label();
-                Controls.Add(notfound);
-                notfound.Font = new Font("Tahoma", 7, FontStyle.Underline, GraphicsUnit.Point);
-                notfound.ForeColor = Color.Black;
-                notfound.Location = new Point(label2.Location.X + label2.Width, label2.Location.Y);
-                notfound.Name = "text";
-                notfound.BackColor = Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(233)))), ((int)(((byte)(216)))));
-                notfound.Size = new Size(430, 32);
-                notfound.TabIndex = 16;
-                notfound.Text = "No Path Found";
-                notfound.TextAlign = ContentAlignment.MiddleLeft;
-                notfound.BringToFront();
-                links.Add(notfound);
-
-            }
-            else
-            {
-                foreach (String item in path)
-                {
-                    Label link = new Label();
-                    Controls.Add(link);
-                    link.Font = new Font("Tahoma", 7, FontStyle.Underline, GraphicsUnit.Point);
-                    link.ForeColor = Color.Blue;
-                    if ((label2.Location.Y + vertical * 35) > ouputPanel.Location.Y)
-                    {
-                        vertical = 0;
-                        link.Location = new Point(label2.Location.X + label2.Width + 430, label2.Location.Y + vertical * link.Height);
-                        link.Name = item;
-                        link.BackColor = Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(233)))), ((int)(((byte)(216)))));
-                        link.Size = new Size(430, 32);
-                        link.TabIndex = 16;
-                        link.Text = item;
-                        link.TextAlign = ContentAlignment.MiddleLeft;
-                        link.Click += new EventHandler(link_Click);
-                        link.BringToFront();
-                        links.Add(link);
-                        vertical += 2;
-                    }
-                    else
-                    {
-                        link.Location = new Point(label2.Location.X + label2.Width, label2.Location.Y + vertical * link.Height);
-                        link.Name = item;
-                        link.BackColor = Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(233)))), ((int)(((byte)(216)))));
-                        link.Size = new Size(430, 32);
-                        link.TabIndex = 16;
-                        link.Text = item;
-                        link.TextAlign = ContentAlignment.MiddleLeft;
-                        link.Click += new EventHandler(link_Click);
-                        link.BringToFront();
-                        links.Add(link);
-                        vertical += 2;
-                    }
-                }
+                Label link = new Label();
+                link.Text = item;
+                link.ForeColor = Color.Blue;
+                linkBox.Items.Add(item);
             }
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -280,9 +229,6 @@ namespace BingSlamet
                 klik.controls.play();
             }
         }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {}
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -309,49 +255,16 @@ namespace BingSlamet
             }
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void foreground_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            System.Windows.Forms.Application.Exit();
+            Application.Exit();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void windowsBar_Paint(object sender)
-        {
-
-        }
         private bool mouseDown;
         private Point lastLocation;
 
@@ -365,6 +278,7 @@ namespace BingSlamet
         {
             mouseDown = false;
         }
+
         private void Main_MouseMove(object sender, MouseEventArgs e)
         {
             if (mouseDown)
@@ -375,28 +289,23 @@ namespace BingSlamet
                 this.Update();
             }
         }
+
         private void Click_OnMouseDown(object sender, MouseEventArgs e)
         {
             klik.controls.play();
         }
+
         private void link_Click(object sender, EventArgs e)
         {
-            Label link = sender as Label;
-            string path = link.Text.Substring(0, link.Text.LastIndexOf('\\'));
-            Process.Start(new System.Diagnostics.ProcessStartInfo()
+            var lb = (ListBox)sender;
+            var dir = (String)lb.SelectedItem;
+            string path = dir.Substring(0, dir.LastIndexOf('\\'));
+            Process.Start(new ProcessStartInfo()
             {
                 FileName = path,
                 UseShellExecute = true,
                 Verb = "open"
             });
-        }
-        private void clearLink()
-        {
-            foreach (Label link in links)
-            {
-                link.Text = "";
-            }
-
         }
 
         private void audioOn_Click(object sender, EventArgs e)
@@ -412,14 +321,10 @@ namespace BingSlamet
             audioOff.Visible = false;
             audioOn.Visible = true;
         }
+
         private void comboBox1_Click(object sender, EventArgs e)
         {
             comboBox1.DroppedDown = true;
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
 
         }
     }

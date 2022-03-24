@@ -41,6 +41,7 @@
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.textTimeElapsed = new System.Windows.Forms.Label();
             this.foreground = new System.Windows.Forms.Panel();
+            this.linkBox = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -87,7 +88,6 @@
             this.textBox2.Size = new System.Drawing.Size(276, 33);
             this.textBox2.TabIndex = 2;
             this.textBox2.Text = "Type Filename";
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
             this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
             // 
@@ -137,7 +137,6 @@
             this.ouputPanel.Name = "ouputPanel";
             this.ouputPanel.Size = new System.Drawing.Size(1647, 574);
             this.ouputPanel.TabIndex = 8;
-            this.ouputPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // button3
             // 
@@ -182,6 +181,7 @@
             // foreground
             // 
             this.foreground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(233)))), ((int)(((byte)(216)))));
+            this.foreground.Controls.Add(this.linkBox);
             this.foreground.Controls.Add(this.label3);
             this.foreground.Controls.Add(this.pictureBox1);
             this.foreground.Controls.Add(this.label2);
@@ -200,7 +200,19 @@
             this.foreground.Name = "foreground";
             this.foreground.Size = new System.Drawing.Size(1662, 980);
             this.foreground.TabIndex = 14;
-            this.foreground.Paint += new System.Windows.Forms.PaintEventHandler(this.foreground_Paint);
+            // 
+            // linkBox
+            // 
+            this.linkBox.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.linkBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
+            this.linkBox.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.linkBox.FormattingEnabled = true;
+            this.linkBox.ItemHeight = 30;
+            this.linkBox.Location = new System.Drawing.Point(431, 270);
+            this.linkBox.Name = "linkBox";
+            this.linkBox.Size = new System.Drawing.Size(602, 64);
+            this.linkBox.TabIndex = 18;
+            this.linkBox.SelectedIndexChanged += new System.EventHandler(this.link_Click);
             // 
             // label3
             // 
@@ -237,7 +249,6 @@
             this.label2.Size = new System.Drawing.Size(126, 25);
             this.label2.TabIndex = 15;
             this.label2.Text = "Path Found:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // audioOn
             // 
@@ -289,7 +300,6 @@
             this.label1.Size = new System.Drawing.Size(298, 24);
             this.label1.TabIndex = 12;
             this.label1.Text = "Bing Slamet Folder Crawling";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // closeButton
             // 
@@ -313,7 +323,6 @@
             this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Logo.TabIndex = 12;
             this.Logo.TabStop = false;
-            this.Logo.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // Main
             // 
@@ -368,5 +377,6 @@
         private Label label2;
         private PictureBox pictureBox1;
         private Label label3;
+        private ListBox linkBox;
     }
 }
