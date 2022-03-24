@@ -56,6 +56,7 @@
             this.closeButton.TabIndex = 3;
             this.closeButton.TabStop = false;
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
+            this.closeButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Click_OnMouseDown);
             // 
             // button1
             // 
@@ -72,6 +73,7 @@
             this.button1.Text = "sip";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Click_OnMouseDown);
             // 
             // Form2
             // 

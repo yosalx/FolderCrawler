@@ -250,7 +250,7 @@ namespace BingSlamet
                         link.Click += new EventHandler(link_Click);
                         link.BringToFront();
                         links.Add(link);
-                        vertical++;
+                        vertical += 2;
                     }
                     else
                     {
@@ -264,7 +264,7 @@ namespace BingSlamet
                         link.Click += new EventHandler(link_Click);
                         link.BringToFront();
                         links.Add(link);
-                        vertical++;
+                        vertical += 2;
                     }
                 }
             }
@@ -370,6 +370,10 @@ namespace BingSlamet
 
                 this.Update();
             }
+        }
+        private void Click_OnMouseDown(object sender, MouseEventArgs e)
+        {
+            klik.controls.play();
         }
         private void link_Click(object sender, EventArgs e)
         {

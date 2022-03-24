@@ -10,8 +10,10 @@ using System.Windows.Forms;
 
 namespace BingSlamet
 {
+
     public partial class Form4 : Form
     {
+        WMPLib.WindowsMediaPlayer klik = new WMPLib.WindowsMediaPlayer();
         public Form4()
         {
             InitializeComponent();
@@ -30,6 +32,10 @@ namespace BingSlamet
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        private void Click_OnMouseDown(object sender, MouseEventArgs e)
+        {
+            klik.URL = @"./Resources/click.wav";
         }
     }
 }
