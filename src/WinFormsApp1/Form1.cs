@@ -218,7 +218,7 @@ namespace BingSlamet
                 Controls.Add(notfound);
                 notfound.Font = new Font("Tahoma", 7, FontStyle.Underline, GraphicsUnit.Point);
                 notfound.ForeColor = Color.Black;
-                notfound.Location = new Point(411, 263);
+                notfound.Location = new Point(label2.Location.X + label2.Width, label2.Location.Y);
                 notfound.Name = "text";
                 notfound.BackColor = Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(233)))), ((int)(((byte)(216)))));
                 notfound.Size = new Size(430, 32);
@@ -237,10 +237,10 @@ namespace BingSlamet
                     Controls.Add(link);
                     link.Font = new Font("Tahoma", 7, FontStyle.Underline, GraphicsUnit.Point);
                     link.ForeColor = Color.Blue;
-                    if ((270 + vertical *35) > 310)
+                    if ((label2.Location.Y + label2.Size.Height + vertical * label2.Size.Height) > ouputPanel.Location.Y)
                     {
                         vertical = 0;
-                        link.Location = new Point(851, 270 + vertical * 35);
+                        link.Location = new Point(label2.Location.X + label2.Width + 430, label2.Location.Y + vertical * label2.Size.Height);
                         link.Name = item;
                         link.BackColor = Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(233)))), ((int)(((byte)(216)))));
                         link.Size = new Size(430, 32);
@@ -254,7 +254,7 @@ namespace BingSlamet
                     }
                     else
                     {
-                        link.Location = new Point(411, 270 + vertical * 35);
+                        link.Location = new Point(label2.Location.X + label2.Width, label2.Location.Y + vertical * label2.Size.Height);
                         link.Name = item;
                         link.BackColor = Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(233)))), ((int)(((byte)(216)))));
                         link.Size = new Size(430, 32);
@@ -407,6 +407,11 @@ namespace BingSlamet
         private void comboBox1_Click(object sender, EventArgs e)
         {
             comboBox1.DroppedDown = true;
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
 
         }
     }
