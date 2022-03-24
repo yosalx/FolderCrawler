@@ -40,7 +40,6 @@
             this.TextStartingDir = new System.Windows.Forms.Label();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.textTimeElapsed = new System.Windows.Forms.Label();
-            this.labelHyperlink = new System.Windows.Forms.LinkLabel();
             this.foreground = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,6 +49,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.closeButton = new System.Windows.Forms.PictureBox();
             this.Logo = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.foreground.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.audioOn)).BeginInit();
@@ -84,7 +84,7 @@
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.MinimumSize = new System.Drawing.Size(212, 26);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(276, 33);
+            this.textBox2.Size = new System.Drawing.Size(276, 26);
             this.textBox2.TabIndex = 2;
             this.textBox2.Text = "Type Filename";
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
@@ -123,7 +123,7 @@
             this.comboBox1.Location = new System.Drawing.Point(12, 310);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(276, 38);
+            this.comboBox1.Size = new System.Drawing.Size(276, 28);
             this.comboBox1.TabIndex = 7;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -162,7 +162,7 @@
             this.TextStartingDir.Location = new System.Drawing.Point(298, 208);
             this.TextStartingDir.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TextStartingDir.Name = "TextStartingDir";
-            this.TextStartingDir.Size = new System.Drawing.Size(12, 50);
+            this.TextStartingDir.Size = new System.Drawing.Size(8, 36);
             this.TextStartingDir.TabIndex = 11;
             this.TextStartingDir.Text = "\r\n\r\n";
             // 
@@ -174,26 +174,14 @@
             this.textTimeElapsed.ForeColor = System.Drawing.Color.Black;
             this.textTimeElapsed.Location = new System.Drawing.Point(1350, 936);
             this.textTimeElapsed.Name = "textTimeElapsed";
-            this.textTimeElapsed.Size = new System.Drawing.Size(151, 25);
+            this.textTimeElapsed.Size = new System.Drawing.Size(105, 18);
             this.textTimeElapsed.TabIndex = 12;
             this.textTimeElapsed.Text = "Time Elapsed: ";
-            // 
-            // labelHyperlink
-            // 
-            this.labelHyperlink.AutoSize = true;
-            this.labelHyperlink.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(233)))), ((int)(((byte)(216)))));
-            this.labelHyperlink.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelHyperlink.Location = new System.Drawing.Point(12, 936);
-            this.labelHyperlink.Name = "labelHyperlink";
-            this.labelHyperlink.Size = new System.Drawing.Size(104, 25);
-            this.labelHyperlink.TabIndex = 13;
-            this.labelHyperlink.TabStop = true;
-            this.labelHyperlink.Text = "linkLabel1";
-            this.labelHyperlink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // foreground
             // 
             this.foreground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(233)))), ((int)(((byte)(216)))));
+            this.foreground.Controls.Add(this.label3);
             this.foreground.Controls.Add(this.pictureBox1);
             this.foreground.Controls.Add(this.label2);
             this.foreground.Controls.Add(this.audioOn);
@@ -233,7 +221,7 @@
             this.label2.Location = new System.Drawing.Point(312, 270);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 25);
+            this.label2.Size = new System.Drawing.Size(91, 18);
             this.label2.TabIndex = 15;
             this.label2.Text = "Path Found";
             // 
@@ -284,7 +272,7 @@
             this.label1.Location = new System.Drawing.Point(64, 8);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(298, 24);
+            this.label1.Size = new System.Drawing.Size(201, 17);
             this.label1.TabIndex = 12;
             this.label1.Text = "Bing Slamet Folder Crawling";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -313,13 +301,24 @@
             this.Logo.TabStop = false;
             this.Logo.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(786, 481);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(91, 18);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "Path Found";
+            // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(76)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1670, 984);
-            this.Controls.Add(this.labelHyperlink);
             this.Controls.Add(this.textTimeElapsed);
             this.Controls.Add(this.ouputPanel);
             this.Controls.Add(this.foreground);
@@ -357,7 +356,6 @@
         private Label TextStartingDir;
         private FolderBrowserDialog folderBrowserDialog1;
         private Label textTimeElapsed;
-        private LinkLabel labelHyperlink;
         private Panel foreground;
         private Panel windowsBar;
         private PictureBox closeButton;
@@ -367,5 +365,6 @@
         private PictureBox audioOn;
         private Label label2;
         private PictureBox pictureBox1;
+        private Label label3;
     }
 }

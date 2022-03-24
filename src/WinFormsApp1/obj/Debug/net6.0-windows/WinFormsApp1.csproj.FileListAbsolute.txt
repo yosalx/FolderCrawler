@@ -89,3 +89,8 @@ C:\Users\Arik\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0
 C:\Users\Arik\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.csproj.ResolveComReference.cache
 C:\Users\Arik\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\BingSlamet.Form3.resources
 C:\Users\Arik\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\BingSlamet.Form4.resources
+C:\Users\Yoseph Alexander\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\Interop.WMPLib.dll
+C:\Users\Yoseph Alexander\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\WinFormsApp1.csproj.ResolveComReference.cache
+C:\Users\Yoseph Alexander\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\BingSlamet.Form2.resources
+C:\Users\Yoseph Alexander\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\BingSlamet.Form3.resources
+C:\Users\Yoseph Alexander\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Debug\net6.0-windows\BingSlamet.Form4.resources
