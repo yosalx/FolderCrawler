@@ -55,7 +55,7 @@ Project is: _complete_
 - This project was created to fulfill our Big Project for IF221 Strategi Algoritma
 
 ## Video
-- [Youtbe](https://youtu.be/DcgmKnSQTu4)
+- [Youtube](https://youtu.be/DcgmKnSQTu4)
 
 ## Contact
 Created by Bing Slamet Berdikari 2022 All Rights Reserved.
