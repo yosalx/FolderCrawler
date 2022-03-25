@@ -1,0 +1,13 @@
+C:\Users\Arik\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Release\net6.0-windows\WinFormsApp1.csproj.AssemblyReference.cache
+C:\Users\Arik\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Release\net6.0-windows\Interop.WMPLib.dll
+C:\Users\Arik\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Release\net6.0-windows\WinFormsApp1.csproj.ResolveComReference.cache
+C:\Users\Arik\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Release\net6.0-windows\BingSlamet.Main.resources
+C:\Users\Arik\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Release\net6.0-windows\BingSlamet.Form2.resources
+C:\Users\Arik\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Release\net6.0-windows\BingSlamet.Form3.resources
+C:\Users\Arik\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Release\net6.0-windows\BingSlamet.Form4.resources
+C:\Users\Arik\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Release\net6.0-windows\WinFormsApp1.Properties.Resources.resources
+C:\Users\Arik\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Release\net6.0-windows\WinFormsApp1.csproj.GenerateResource.cache
+C:\Users\Arik\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Release\net6.0-windows\WinFormsApp1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Arik\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Release\net6.0-windows\WinFormsApp1.AssemblyInfoInputs.cache
+C:\Users\Arik\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Release\net6.0-windows\WinFormsApp1.AssemblyInfo.cs
+C:\Users\Arik\Documents\GitHub\Tubes2_13520048\src\WinFormsApp1\obj\Release\net6.0-windows\WinFormsApp1.csproj.CoreCompileInputs.cache

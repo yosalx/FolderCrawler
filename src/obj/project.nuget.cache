@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "HKac1Tctj00XrIct+xo6g0/E7MrR1ac21SNUUQJnVHx7LpCZg2wKxgFrOVXkzL4i76NmYXW8jleMUt2lUK6ILQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Arik\\Documents\\GitHub\\Tubes2_13520048\\src\\BingSlamet.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Arik\\.nuget\\packages\\automaticgraphlayout\\1.1.11\\automaticgraphlayout.1.1.11.nupkg.sha512",
+    "C:\\Users\\Arik\\.nuget\\packages\\automaticgraphlayout.drawing\\1.1.11\\automaticgraphlayout.drawing.1.1.11.nupkg.sha512",
+    "C:\\Users\\Arik\\.nuget\\packages\\automaticgraphlayout.graphviewergdi\\1.1.11\\automaticgraphlayout.graphviewergdi.1.1.11.nupkg.sha512",
+    "C:\\Users\\Arik\\.nuget\\packages\\automaticgraphlayout.wpfgraphcontrol\\1.1.11\\automaticgraphlayout.wpfgraphcontrol.1.1.11.nupkg.sha512"
+  ],
+  "logs": []
+}
