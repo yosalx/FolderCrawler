@@ -36,7 +36,10 @@ Program ini digunakan untuk mencari lokasi sebuah file dalam kumplan folder di d
 ## How to Run
 - Jalankan file `\bin\BingSlamet.exe`
 - Pilih Folder awal pencarian
-- Pilih algoritma pencari
+- ketik nama file yang ingin dicari beserta extensionnya (ex : toxt1.txt)
+- Pilih algoritma yang ingin digunakan untuk mencari file
+- lalu klik tombol Find First atau Find All sesuai kebutuhan
+- viola ! direktori file yang ingin dicari akan ditampilkan jika file ditemukan
 
 
 ## Project Status
