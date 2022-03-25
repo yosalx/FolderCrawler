@@ -33,7 +33,7 @@ Program ini digunakan untuk mencari lokasi sebuah file dalam kumplan folder di d
 4. Repository ini
 
 ## How to Run
-- Jalankan file `\bin\....exe`
+- Jalankan file `\bin\BingSlamet.exe`
 - Pilih Folder awal pencarian
 - Pilih algoritma pencari
 
