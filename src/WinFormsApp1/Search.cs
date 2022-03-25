@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using Microsoft.Msagl.Drawing;
+using Microsoft.Msagl.GraphViewerGdi;
 
 namespace BingSlamet
 {
@@ -54,40 +55,53 @@ namespace BingSlamet
             return -999;
         }
 
-        public void makeGraph()
+        private void changeBlueToRoot(string nodename)
         {
-            int j = tree.Count() - 1;
-            while (j != 0)
+            string node = nodename;
+            while (graph.FindNode(node).InEdges.Count() > 0)
             {
-                if (findIdbyName(tree[j].name) != j)
-                {
-                    try
-                    {
-                        tree[findIdbyName(tree[j].name)].name = tree[findIdbyName(tree[j].name)].name + " (" + tree[tree[findIdbyName(tree[j].name)].parent_id].name + ")";
-                    } catch { }
-                    tree[j].name += " (" + tree[tree[j].parent_id].name + ")";
-                }
-                if (tree[j].found == "Found")
-                {
-                    graph.AddEdge(tree[tree[j].parent_id].name, tree[j].name).Attr.Color = Microsoft.Msagl.Drawing.Color.Blue;
-                    graph.FindNode(tree[j].name).Attr.FillColor = Microsoft.Msagl.Drawing.Color.Blue;
-                    graph.FindNode(tree[tree[j].parent_id].name).Attr.FillColor = Microsoft.Msagl.Drawing.Color.Blue;
-                }
-                else if (tree[j].found == "Queued")
-                {
-                    graph.AddEdge(tree[tree[j].parent_id].name, tree[j].name).Attr.Color = Microsoft.Msagl.Drawing.Color.Black;
-                }
-                else
-                {
-                    graph.AddEdge(tree[tree[j].parent_id].name, tree[j].name).Attr.Color = Microsoft.Msagl.Drawing.Color.Red;
-                    graph.FindNode(tree[j].name).Attr.FillColor = Microsoft.Msagl.Drawing.Color.Red;
-                    if (graph.FindNode(tree[tree[j].parent_id].name).Attr.FillColor != Microsoft.Msagl.Drawing.Color.Blue)
-                    {
+                graph.FindNode(node).Attr.FillColor = Microsoft.Msagl.Drawing.Color.Blue;
+                graph.FindNode(node).InEdges.Last().Attr.Color = Microsoft.Msagl.Drawing.Color.Blue;
+                node = graph.FindNode(node).InEdges.Last().SourceNode.Id;
+            }
+            graph.FindNode(node).Attr.FillColor = Microsoft.Msagl.Drawing.Color.Blue;
+        }
 
-                        graph.FindNode(tree[tree[j].parent_id].name).Attr.FillColor = Microsoft.Msagl.Drawing.Color.Red;
-                    }
-                }
-                j--;
+        private string createNode(string name, int parent)
+        {
+            if (findIdbyName(name) != -999)
+            {
+                string nodename = (name + " (" + this.tree[parent].name + ")");
+                graph.AddNode(nodename);
+                return nodename;
+            }
+            else
+            {
+                graph.AddNode(name);
+                return name;
+            }
+        }
+
+        public void wait(int milliseconds)
+        {
+            var timer1 = new System.Windows.Forms.Timer();
+            if (milliseconds == 0 || milliseconds < 0) return;
+
+            // Console.WriteLine("start wait timer");
+            timer1.Interval = milliseconds;
+            timer1.Enabled = true;
+            timer1.Start();
+
+            timer1.Tick += (s, e) =>
+            {
+                timer1.Enabled = false;
+                timer1.Stop();
+                // Console.WriteLine("stop wait timer");
+            };
+
+            while (timer1.Enabled)
+            {
+                Application.DoEvents();
             }
         }
 
@@ -98,14 +112,24 @@ namespace BingSlamet
                 IgnoreInaccessible = true,
                 AttributesToSkip = FileAttributes.System
             };
+
             string[] files = Directory.GetFiles(currDir,"*",options);
                 
             foreach(string content in files){
                 if (Path.GetFileName(content) == this.filename)
                 {
-                    tree.Add(new dirTree(findIdbyDir(currDir), Path.GetFileName(content), content, "File", "Found"));
+                    wait(100);
+                    tree.Add(new dirTree(findIdbyDir(currDir), Path.GetFileName(content), content, "File", "Found", createNode(Path.GetFileName(content), findIdbyDir(currDir))));
+                    graph.FindNode(tree.Last().nodename).Attr.FillColor = Microsoft.Msagl.Drawing.Color.Blue;
+                    graph.AddEdge(tree[tree.Last().parent_id].nodename, tree.Last().nodename).Attr.Color = Microsoft.Msagl.Drawing.Color.Blue;
+                    Program.F1.viewer.Graph = graph;
+                    Program.F1.ouputPanel.SuspendLayout();
+                    Program.F1.viewer.Dock = DockStyle.Fill;
+                    Program.F1.ouputPanel.Controls.Add(Program.F1.viewer);
+                    Program.F1.ouputPanel.ResumeLayout();
+                    Program.F1.ouputPanel.Show();
                     done = true;
-                    makeAllFound(tree[tree.Count() - 1]);
+                    changeBlueToRoot(tree.Last().nodename);
                     dir_found.Add(content);
                     if (done && set == 0)
                     {
@@ -114,7 +138,16 @@ namespace BingSlamet
                 }
                 else
                 {
-                    tree.Add(new dirTree(findIdbyDir(currDir), Path.GetFileName(content), content, "File", "Not"));
+                    wait(100);
+                    tree.Add(new dirTree(findIdbyDir(currDir), Path.GetFileName(content), content, "File", "Not", createNode(Path.GetFileName(content), findIdbyDir(currDir))));
+                    graph.FindNode(tree.Last().nodename).Attr.FillColor = Microsoft.Msagl.Drawing.Color.Red;
+                    graph.AddEdge(tree[tree.Last().parent_id].nodename, tree.Last().nodename).Attr.Color = Microsoft.Msagl.Drawing.Color.Red;
+                    Program.F1.viewer.Graph = graph;
+                    Program.F1.ouputPanel.SuspendLayout();
+                    Program.F1.viewer.Dock = DockStyle.Fill;
+                    Program.F1.ouputPanel.Controls.Add(Program.F1.viewer);
+                    Program.F1.ouputPanel.ResumeLayout();
+                    Program.F1.ouputPanel.Show();
                 }
             }
             string[] Dirs = Directory.GetDirectories(currDir,"*",options);
@@ -122,11 +155,29 @@ namespace BingSlamet
             {
                 if (done && set == 0)
                 {
-                    tree.Add(new dirTree(findIdbyDir(currDir), Path.GetFileName(Folder), Folder, "Folder", "Queued"));
+                    wait(100);
+                    tree.Add(new dirTree(findIdbyDir(currDir), Path.GetFileName(Folder), Folder, "Folder", "Queued", createNode(Path.GetFileName(Folder), findIdbyDir(currDir))));
+                    graph.FindNode(tree.Last().nodename);
+                    graph.AddEdge(tree[tree.Last().parent_id].nodename, Path.GetFileName(Folder));
+                    Program.F1.viewer.Graph = graph;
+                    Program.F1.ouputPanel.SuspendLayout();
+                    Program.F1.viewer.Dock = DockStyle.Fill;
+                    Program.F1.ouputPanel.Controls.Add(Program.F1.viewer);
+                    Program.F1.ouputPanel.ResumeLayout();
+                    Program.F1.ouputPanel.Show();
                 }
                 else
                 {
-                    tree.Add(new dirTree(findIdbyDir(currDir), Path.GetFileName(Folder), Folder, "Folder", "Not"));
+                    wait(100);
+                    tree.Add(new dirTree(findIdbyDir(currDir), Path.GetFileName(Folder), Folder, "Folder", "Not", createNode(Path.GetFileName(Folder), findIdbyDir(currDir))));
+                    graph.FindNode(tree.Last().nodename).Attr.FillColor = Microsoft.Msagl.Drawing.Color.Red;
+                    graph.AddEdge(tree[tree.Last().parent_id].nodename, Path.GetFileName(Folder)).Attr.Color = Microsoft.Msagl.Drawing.Color.Red;
+                    Program.F1.viewer.Graph = graph;
+                    Program.F1.ouputPanel.SuspendLayout();
+                    Program.F1.viewer.Dock = DockStyle.Fill;
+                    Program.F1.ouputPanel.Controls.Add(Program.F1.viewer);
+                    Program.F1.ouputPanel.ResumeLayout();
+                    Program.F1.ouputPanel.Show();
                     done = dfs_reccursion(Folder, set, done);
                 }
             }
@@ -135,14 +186,25 @@ namespace BingSlamet
 
         public void dfs_search(int set)
         {
+            Program.F1.viewer.Graph = graph;
             stopwatch.Start();
             try
             {
-                tree.Add(new dirTree(-999, Path.GetFileName(startdir), startdir, "Folder", "Not"));
+                wait(100);
+                tree.Add(new dirTree(-999, Path.GetFileName(startdir), startdir, "Folder", "Not", Path.GetFileName(startdir)));
+                graph.AddNode(tree.Last().nodename);
+                graph.FindNode(tree.First().nodename).Attr.FillColor = Microsoft.Msagl.Drawing.Color.Red;
+                Program.F1.viewer.Graph = graph;
+                Program.F1.ouputPanel.SuspendLayout();
+                Program.F1.viewer.Dock = DockStyle.Fill;
+                Program.F1.ouputPanel.Controls.Add(Program.F1.viewer);
+                Program.F1.ouputPanel.ResumeLayout();
+                Program.F1.ouputPanel.Show();
                 bool done = false;
-                dfs_reccursion(tree[0].directory, set, done);
+                dfs_reccursion(tree.First().directory, set, done);
             }
             catch { }
+
             stopwatch.Stop();
         }
 
@@ -156,7 +218,15 @@ namespace BingSlamet
             };
             int i = 0;
             bool found = false;
-            tree.Add(new dirTree(-999, Path.GetFileName(startdir), startdir, "Folder", "Not"));
+            tree.Add(new dirTree(-999, Path.GetFileName(startdir), startdir, "Folder", "Not", Path.GetFileName(startdir)));
+            graph.AddNode(tree.Last().nodename);
+            graph.FindNode(tree.First().nodename).Attr.FillColor = Microsoft.Msagl.Drawing.Color.Red;
+            Program.F1.viewer.Graph = graph;
+            Program.F1.ouputPanel.SuspendLayout();
+            Program.F1.viewer.Dock = DockStyle.Fill;
+            Program.F1.ouputPanel.Controls.Add(Program.F1.viewer);
+            Program.F1.ouputPanel.ResumeLayout();
+            Program.F1.ouputPanel.Show();
             string parentdir = startdir;
             while (i < tree.Count())
             {
@@ -165,14 +235,32 @@ namespace BingSlamet
                 {
                     if ((Path.GetFileName(a) == this.filename))
                     {
-                        tree.Add(new dirTree(i, Path.GetFileName(a), a, "File", "Found"));
+                        wait(100);
+                        tree.Add(new dirTree(i, Path.GetFileName(a), a, "File", "Found", createNode(Path.GetFileName(a), i)));
+                        graph.FindNode(tree.Last().nodename).Attr.FillColor = Microsoft.Msagl.Drawing.Color.Blue;
+                        graph.AddEdge(tree[i].nodename, tree.Last().nodename).Attr.Color = Microsoft.Msagl.Drawing.Color.Blue;
                         found = true;
-                        makeAllFound(tree[tree.Count() - 1]);
+                        changeBlueToRoot(tree.Last().nodename);
+                        Program.F1.viewer.Graph = graph;
+                        Program.F1.ouputPanel.SuspendLayout();
+                        Program.F1.viewer.Dock = DockStyle.Fill;
+                        Program.F1.ouputPanel.Controls.Add(Program.F1.viewer);
+                        Program.F1.ouputPanel.ResumeLayout();
+                        Program.F1.ouputPanel.Show();
                         dir_found.Add(a);
                     }
                     else
                     {
-                        tree.Add(new dirTree(i, Path.GetFileName(a), a, "File", "Not"));
+                        wait(100);
+                        tree.Add(new dirTree(i, Path.GetFileName(a), a, "File", "Not", createNode(Path.GetFileName(a), i)));
+                        graph.FindNode(tree.Last().nodename).Attr.FillColor = Microsoft.Msagl.Drawing.Color.Red;
+                        graph.AddEdge(tree[i].nodename, tree.Last().nodename).Attr.Color = Microsoft.Msagl.Drawing.Color.Red;
+                        Program.F1.viewer.Graph = graph;
+                        Program.F1.ouputPanel.SuspendLayout();
+                        Program.F1.viewer.Dock = DockStyle.Fill;
+                        Program.F1.ouputPanel.Controls.Add(Program.F1.viewer);
+                        Program.F1.ouputPanel.ResumeLayout();
+                        Program.F1.ouputPanel.Show();
                     }
                 }
                 if (set == 0 && found)
@@ -182,7 +270,16 @@ namespace BingSlamet
                 temptree = Directory.GetDirectories(tree[i].directory, "*", options).ToList();
                 foreach (string a in temptree)
                 {
-                    tree.Add(new dirTree(i, Path.GetFileName(a), a, "Folder", "Not"));
+                    wait(100);
+                    tree.Add(new dirTree(i, Path.GetFileName(a), a, "Folder", "Not", createNode(Path.GetFileName(a), i)));
+                    graph.FindNode(tree.Last().nodename).Attr.FillColor = Microsoft.Msagl.Drawing.Color.Red;
+                    graph.AddEdge(tree[i].nodename, tree.Last().nodename).Attr.Color = Microsoft.Msagl.Drawing.Color.Red;
+                    Program.F1.viewer.Graph = graph;
+                    Program.F1.ouputPanel.SuspendLayout();
+                    Program.F1.viewer.Dock = DockStyle.Fill;
+                    Program.F1.ouputPanel.Controls.Add(Program.F1.viewer);
+                    Program.F1.ouputPanel.ResumeLayout();
+                    Program.F1.ouputPanel.Show();
                 }
                 try
                 {

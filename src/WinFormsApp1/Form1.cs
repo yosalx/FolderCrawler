@@ -15,8 +15,8 @@ namespace BingSlamet
         WMPLib.WindowsMediaPlayer klik = new WMPLib.WindowsMediaPlayer();
         private static List<String> path = new List<String>();
         private static List<Label> links = new List<Label>();
+        public GViewer viewer = new GViewer();
 
-        GViewer viewer = new GViewer();
         public Main()
         {
             startupSound.URL = @"./Resources/windowsStartup.wav";
@@ -47,17 +47,11 @@ namespace BingSlamet
                 {
                     Search test = new(dir, filename);
                     test.bfs_search(0);
-                    test.makeGraph();
                     path = new List<string>();
                     path = test.dir_found;
                     makeLinks(path);
-                    ouputPanel.SuspendLayout();
-                    ouputPanel.Controls.Add(viewer);
-                    ouputPanel.ResumeLayout();
-                    ouputPanel.Show();
-                    viewer.Graph = test.graph;
-                    viewer.Dock = DockStyle.Fill;
-                    textTimeElapsed.Text = "Time Elapsed: " + test.stopwatch.Elapsed.ToString(@"m\:ss\.ffffff");
+                    double realTime = test.stopwatch.Elapsed.TotalSeconds - (0.1 * (test.tree.Count()-1));
+                    textTimeElapsed.Text = "Time Elapsed: " + realTime;
                     if (path.Count() == 0)
                     {
                         klik.controls.play();
@@ -85,17 +79,11 @@ namespace BingSlamet
                 {
                     Search test = new(dir, filename);
                     test.dfs_search(0);
-                    test.makeGraph();
                     path = new List<string>();
                     path = test.dir_found;
                     makeLinks(path);
-                    ouputPanel.SuspendLayout();
-                    ouputPanel.Controls.Add(viewer);
-                    ouputPanel.ResumeLayout();
-                    ouputPanel.Show();
-                    viewer.Graph = test.graph;
-                    viewer.Dock = DockStyle.Fill;
-                    textTimeElapsed.Text = "Time Elapsed: " + test.stopwatch.Elapsed.ToString(@"m\:ss\.ffffff");
+                    double realTime = test.stopwatch.Elapsed.TotalSeconds - (0.1 * (test.tree.Count() - 1));
+                    textTimeElapsed.Text = "Time Elapsed: " + realTime;
                     if (path.Count() == 0)
                     {
                         klik.controls.play();
@@ -123,6 +111,10 @@ namespace BingSlamet
 
         private void button2_Click(object sender, EventArgs e)
         {
+            ouputPanel.SuspendLayout();
+            ouputPanel.Controls.Add(viewer);
+            ouputPanel.ResumeLayout();
+            ouputPanel.Show();
             if (TextStartingDir.Text.ToString() == "\r\n\r\n")
             {
                 klik.controls.play();
@@ -140,17 +132,11 @@ namespace BingSlamet
                 try
                 {
                     test.bfs_search(1);
-                    test.makeGraph();
                     path = new List<string>();
                     path = test.dir_found;
                     makeLinks(path);
-                    ouputPanel.SuspendLayout();
-                    ouputPanel.Controls.Add(viewer);
-                    ouputPanel.ResumeLayout();
-                    ouputPanel.Show();
-                    viewer.Graph = test.graph;
-                    viewer.Dock = DockStyle.Fill;
-                    textTimeElapsed.Text = "Time Elapsed: " + test.stopwatch.Elapsed.ToString(@"m\:ss\.ffffff");
+                    double realTime = test.stopwatch.Elapsed.TotalSeconds - (0.1 * (test.tree.Count() - 1));
+                    textTimeElapsed.Text = "Time Elapsed: " + realTime;
                     if (path.Count() == 0)
                     {
                         klik.controls.play();
@@ -176,17 +162,11 @@ namespace BingSlamet
 
                     Search test = new(dir, filename);
                     test.dfs_search(1);
-                    test.makeGraph();
                     path = new List<string>();
                     path = test.dir_found;
                     makeLinks(path);
-                    ouputPanel.SuspendLayout();
-                    ouputPanel.Controls.Add(viewer);
-                    ouputPanel.ResumeLayout();
-                    ouputPanel.Show();
-                    viewer.Graph = test.graph;
-                    viewer.Dock = DockStyle.Fill;
-                    textTimeElapsed.Text = "Time Elapsed: " + test.stopwatch.Elapsed.ToString(@"m\:ss\.ffffff");
+                    double realTime = test.stopwatch.Elapsed.TotalSeconds - (0.1 * (test.tree.Count() - 1));
+                    textTimeElapsed.Text = "Time Elapsed: " + realTime;
                     if (path.Count() == 0)
                     {
                         klik.controls.play();
