@@ -193,7 +193,7 @@
             // 
             // button4
             // 
-            this.button4.BackgroundImage = global::WinFormsApp1.Properties.Resources.FindAll;
+            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -207,7 +207,7 @@
             // 
             // button3
             // 
-            this.button3.BackgroundImage = global::WinFormsApp1.Properties.Resources.FindFirst;
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -252,7 +252,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.Image = global::WinFormsApp1.Properties.Resources.dex1wrp_2e67ad59_681c_473e_8afd_f60a1ff504c6;
-            this.pictureBox1.Location = new System.Drawing.Point(646, 42);
+            this.pictureBox1.Location = new System.Drawing.Point(640, 44);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(408, 46);
@@ -317,6 +317,7 @@
             this.linkBox.Name = "linkBox";
             this.linkBox.Size = new System.Drawing.Size(602, 64);
             this.linkBox.TabIndex = 18;
+            this.linkBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Click_OnMouseDown);
             this.linkBox.SelectedIndexChanged += new System.EventHandler(this.link_Click);
             // 
             // label3
