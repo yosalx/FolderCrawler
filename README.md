@@ -10,6 +10,7 @@
 * [Project Status](#project-status)
 * [Sources](#sources)
 * [Acknowledgements](#acknowledgements)
+* [Video](#video)
 * [Contact](#contact)
 
   
@@ -52,6 +53,9 @@ Project is: _complete_
 - Thanks to academic assistants
 - Thanks to our lovely barudaks in the sky (colleagues)
 - This project was created to fulfill our Big Project for IF221 Strategi Algoritma
+
+## Video
+- [Youtbe](https://youtu.be/DcgmKnSQTu4)
 
 ## Contact
 Created by Bing Slamet Berdikari 2022 All Rights Reserved.
