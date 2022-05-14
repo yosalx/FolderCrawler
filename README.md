@@ -1,5 +1,6 @@
-# TUGAS BESAR 2 -  STRATEGI ALGORITMA : Pengaplikasian Algoritma BFS dan DFS dalam Implementasi Folder Crawling 
-> Program sederhana yang dibuat oleh Kelompok Bing Slamet
+# Folder Crawler
+
+### Folder Crawler Program Implemented using BFS and DFS Algorithm
 
 
 ## Table of Contents
@@ -34,12 +35,12 @@ Program ini digunakan untuk mencari lokasi sebuah file dalam kumplan folder di d
 4. Repository ini
 
 ## How to Run
-- Jalankan file `\bin\BingSlamet.exe`
-- Pilih Folder awal pencarian
-- ketik nama file yang ingin dicari beserta extensionnya (ex : toxt1.txt)
-- Pilih algoritma yang ingin digunakan untuk mencari file
-- lalu klik tombol Find First atau Find All sesuai kebutuhan
-- viola ! direktori file yang ingin dicari akan ditampilkan jika file ditemukan
+- Run the `\bin\BingSlamet.exe` file
+- Choose the starting folder
+- Type the file that will be searched with its extension (ex : toxt1.txt)
+- Choose the preverable algorithm that will be used (DFS/BFS)
+- Choose the preverable searching method (Find First / Find All)
+
 
 
 ## Project Status
